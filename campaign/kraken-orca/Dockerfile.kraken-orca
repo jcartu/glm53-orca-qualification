@@ -1,0 +1,5 @@
+FROM ghcr.io/local-inference-lab/vllm@sha256:55e477ad62ae15a77c9b869e8fb8e2d958f6edcc4d95e306adfa89dee9ed19df
+COPY orca_scale_reconcile.py /opt/venv/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors_moe/orca_scale_reconcile.py
+COPY compressed_tensors_moe_w4a4_nvfp4.py /opt/venv/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors_moe/compressed_tensors_moe_w4a4_nvfp4.py
+COPY fp8.py /opt/venv/lib/python3.12/site-packages/vllm/model_executor/layers/quantization/fp8.py
+LABEL qualification.scope="Orca independent NVFP4 gate/up scale policy on the Karmic Kraken beta; no checkpoint changes; default policy refuses mismatched scales"
