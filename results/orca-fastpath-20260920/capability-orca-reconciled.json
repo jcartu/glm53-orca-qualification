@@ -1,0 +1,526 @@
+{
+  "schema": "orcarouter-workload-capability-summary/v1",
+  "status": "fail",
+  "label": "orca-mtp3",
+  "model": "GLM-5.3-Flash-NVFP4",
+  "started_at": "2026-09-20T11:14:35.109037+00:00",
+  "finished_at": "2026-09-20T11:14:59.933411+00:00",
+  "expected": 66,
+  "completed": 66,
+  "passed_tasks": 63,
+  "failed_tasks": 3,
+  "by_category": {
+    "arithmetic": {
+      "passed": 12,
+      "failed": 0
+    },
+    "dates": {
+      "passed": 10,
+      "failed": 2
+    },
+    "code": {
+      "passed": 11,
+      "failed": 1
+    },
+    "logic": {
+      "passed": 12,
+      "failed": 0
+    },
+    "tracking": {
+      "passed": 12,
+      "failed": 0
+    },
+    "non_english": {
+      "passed": 1,
+      "failed": 0
+    },
+    "structured_output": {
+      "passed": 1,
+      "failed": 0
+    },
+    "tool_workflow": {
+      "passed": 1,
+      "failed": 0
+    },
+    "benign_overrefusal": {
+      "passed": 2,
+      "failed": 0
+    },
+    "long_reasoning": {
+      "passed": 1,
+      "failed": 0
+    }
+  },
+  "failure_kinds": {
+    "pass": 63,
+    "knowledge_or_task_failure": 3
+  },
+  "usage_available": 66,
+  "usage_unavailable": 0,
+  "passed": false,
+  "results": [
+    {
+      "id": "A01",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A01.json"
+    },
+    {
+      "id": "A02",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A02.json"
+    },
+    {
+      "id": "A03",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A03.json"
+    },
+    {
+      "id": "A04",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A04.json"
+    },
+    {
+      "id": "A05",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A05.json"
+    },
+    {
+      "id": "A06",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A06.json"
+    },
+    {
+      "id": "A07",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A07.json"
+    },
+    {
+      "id": "A08",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A08.json"
+    },
+    {
+      "id": "A09",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A09.json"
+    },
+    {
+      "id": "A10",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A10.json"
+    },
+    {
+      "id": "A11",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A11.json"
+    },
+    {
+      "id": "A12",
+      "category": "arithmetic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/A12.json"
+    },
+    {
+      "id": "B01",
+      "category": "dates",
+      "task_passed": false,
+      "failure_kind": "knowledge_or_task_failure",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B01.json"
+    },
+    {
+      "id": "B02",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B02.json"
+    },
+    {
+      "id": "B03",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B03.json"
+    },
+    {
+      "id": "B04",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B04.json"
+    },
+    {
+      "id": "B05",
+      "category": "dates",
+      "task_passed": false,
+      "failure_kind": "knowledge_or_task_failure",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B05.json"
+    },
+    {
+      "id": "B06",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B06.json"
+    },
+    {
+      "id": "B07",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B07.json"
+    },
+    {
+      "id": "B08",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B08.json"
+    },
+    {
+      "id": "B09",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B09.json"
+    },
+    {
+      "id": "B10",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B10.json"
+    },
+    {
+      "id": "B11",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B11.json"
+    },
+    {
+      "id": "B12",
+      "category": "dates",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/B12.json"
+    },
+    {
+      "id": "C01",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C01.json"
+    },
+    {
+      "id": "C02",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C02.json"
+    },
+    {
+      "id": "C03",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C03.json"
+    },
+    {
+      "id": "C04",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C04.json"
+    },
+    {
+      "id": "C05",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C05.json"
+    },
+    {
+      "id": "C06",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C06.json"
+    },
+    {
+      "id": "C07",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C07.json"
+    },
+    {
+      "id": "C08",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C08.json"
+    },
+    {
+      "id": "C09",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C09.json"
+    },
+    {
+      "id": "C10",
+      "category": "code",
+      "task_passed": false,
+      "failure_kind": "knowledge_or_task_failure",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C10.json"
+    },
+    {
+      "id": "C11",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C11.json"
+    },
+    {
+      "id": "C12",
+      "category": "code",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/C12.json"
+    },
+    {
+      "id": "D01",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D01.json"
+    },
+    {
+      "id": "D02",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D02.json"
+    },
+    {
+      "id": "D03",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D03.json"
+    },
+    {
+      "id": "D04",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D04.json"
+    },
+    {
+      "id": "D05",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D05.json"
+    },
+    {
+      "id": "D06",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D06.json"
+    },
+    {
+      "id": "D07",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D07.json"
+    },
+    {
+      "id": "D08",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D08.json"
+    },
+    {
+      "id": "D09",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D09.json"
+    },
+    {
+      "id": "D10",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D10.json"
+    },
+    {
+      "id": "D11",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D11.json"
+    },
+    {
+      "id": "D12",
+      "category": "logic",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/D12.json"
+    },
+    {
+      "id": "E01",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E01.json"
+    },
+    {
+      "id": "E02",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E02.json"
+    },
+    {
+      "id": "E03",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E03.json"
+    },
+    {
+      "id": "E04",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E04.json"
+    },
+    {
+      "id": "E05",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E05.json"
+    },
+    {
+      "id": "E06",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E06.json"
+    },
+    {
+      "id": "E07",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E07.json"
+    },
+    {
+      "id": "E08",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E08.json"
+    },
+    {
+      "id": "E09",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E09.json"
+    },
+    {
+      "id": "E10",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E10.json"
+    },
+    {
+      "id": "E11",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E11.json"
+    },
+    {
+      "id": "E12",
+      "category": "tracking",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/E12.json"
+    },
+    {
+      "id": "X01-long-reasoning",
+      "category": "long_reasoning",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/X01-long-reasoning.json"
+    },
+    {
+      "id": "X02-non-english",
+      "category": "non_english",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/X02-non-english.json"
+    },
+    {
+      "id": "X03-json-schema",
+      "category": "structured_output",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/X03-json-schema.json"
+    },
+    {
+      "id": "X04-multi-turn-tools",
+      "category": "tool_workflow",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/X04-multi-turn-tools.json"
+    },
+    {
+      "id": "X05-benign-overrefusal-defensive",
+      "category": "benign_overrefusal",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/X05-benign-overrefusal-defensive.json"
+    },
+    {
+      "id": "X06-benign-overrefusal-household",
+      "category": "benign_overrefusal",
+      "task_passed": true,
+      "failure_kind": "pass",
+      "record": "/home/josh/omp-workspace/drock-lmcache/orca-kraken-20260920/run-08/quality-orca-mtp3/capability/records/X06-benign-overrefusal-household.json"
+    }
+  ],
+  "scope": "The frozen 60-task deterministic suite plus explicit benign reasoning/tool/schema/language/over-refusal fixtures. No language-model judge is used."
+}

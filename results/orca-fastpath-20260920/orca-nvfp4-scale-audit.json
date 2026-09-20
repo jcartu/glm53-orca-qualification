@@ -1,0 +1,42 @@
+{
+  "schema": "orca-kraken-nvfp4-scale-audit.v1",
+  "checkpoint": "orcarouter/GLM-5.3-Flash-Uncensored-NVFP4 @ ec0adf4f49c9570807cc11a5f650538c1893ae54",
+  "local_root": "/mnt/2king/models/Orca-GLM-5.3-Flash-Uncensored-NVFP4-ec0adf4f",
+  "image_inspected": "ghcr.io/local-inference-lab/vllm@sha256:55e477ad62ae15a77c9b869e8fb8e2d958f6edcc4d95e306adfa89dee9ed19df",
+  "semantics": "compressed-tensors NVFP4: dequantized weight = fp4_code * block_scale_e4m3 / weight_global_scale (the loader passes 1/global as the kernel multiplier). Fused w13 kernels (Marlin and B12X) accept ONE global scale per expert; stock vLLM keeps column 0 (gate) and only warns.",
+  "gate_up_pairs": 12096,
+  "mismatched_pairs": 8291,
+  "gate_up_ratio_range": [0.2777777777777778, 9.955555555555556],
+  "gate_up_ratio_median": 0.9375,
+  "global_divisors_power_of_two": false,
+  "input_global_scales_present": 0,
+  "stock_loader_effect": "The up half of 8,291 fused experts is dequantized with the gate divisor; effective up weights are wrong by up to 9.96x. This is the correctness defect behind the as-published W4A4 degeneration, not a speed tuning issue.",
+  "kraken_beta_status": "The karmic-kraken-beta compressed-tensors NVFP4 MoE loader and B12X experts still take a single per-expert w13 global scale (_normalize_expert_scale keeps column 0). The beta does NOT fix independent gate/up scales; it would load Orca with the same defect on the fast path.",
+  "unification_options": {
+    "larger_divisor": {
+      "feasible": false,
+      "reason": "Rescaling the smaller-divisor half upward overflows E4M3 (source block scales already reach 448; scaled values reached 4460.09), saturating and destroying those blocks."
+    },
+    "smaller_divisor": {
+      "feasible": true,
+      "overflow_pairs": 0,
+      "underflow_to_zero_pairs": 0,
+      "rounded_nonzero_blocks": 4101989447,
+      "total_nonzero_blocks_in_mismatched_pairs": 4346871808,
+      "worst_block_relative_error": 0.057004805654287346,
+      "mean_block_relative_error_over_rounded_blocks": 0.022069037650394346,
+      "note": "FP4 payloads are untouched; per-element weight error equals the relative error of its block scale. Exact preservation is impossible in E4M3 for non-power-of-two ratios, so this is a bounded, measurable approximation, not an identity."
+    }
+  },
+  "exact_reference": "The qualified Marlin W4A16 per-projection path (glm53-orca-qualification campaign/runtime-repair) preserves both divisors exactly and remains the correctness reference for any fast-path comparison.",
+  "decision": "Fast-path Orca serving must use an explicit, logged smaller-divisor reconciliation plus a measured fidelity delta against the exact reference. It must never be presented as bit-identical to the checkpoint, and the default policy remains refuse-on-mismatch.",
+  "host_facts": {
+    "driver": "615.71.09",
+    "cuda_driver_api": 13040,
+    "memory_clock_offset_mhz_all_gpus": 6000,
+    "graphics_clock_offset_mhz_all_gpus": 0,
+    "power_limit_w": 600,
+    "dev_shm": "126G",
+    "changes_made_to_clocks": false
+  }
+}

@@ -6,7 +6,11 @@ clocks). Image: Karmic Kraken beta
 `ghcr.io/local-inference-lab/vllm@sha256:55e477ad62ae15a77c9b869e8fb8e2d958f6edcc4d95e306adfa89dee9ed19df`
 plus the local derivative `glm53-orca-kraken-reconciled:local`
 (`campaign/kraken-orca/Dockerfile.kraken-orca`) carrying three load-time
-patches. Evidence roots: `drock-lmcache/orca-kraken-20260920/run-05..run-10`.
+patches. Machine-readable evidence for every table below is committed in
+`results/orca-fastpath-20260920/` (speed trials, sentinels, refusal records
+and summaries per arm, capability/behavior summaries, scale audit, boot
+commands); the full raw run trees remain on the measurement host under
+`drock-lmcache/orca-kraken-20260920/run-05..run-10`.
 All GPU phases ran under the r26 guarded coordinator (production paused,
 restored and re-verified after every run).
 

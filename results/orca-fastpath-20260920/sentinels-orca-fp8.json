@@ -1,0 +1,140 @@
+{
+  "arithmetic": {
+    "status": 200,
+    "text": "23 \u00d7 19 = **437**\n\nYou can check this: 23 \u00d7 20 = 460, minus 23 = 437.",
+    "passed": true
+  },
+  "reverse": {
+    "status": 200,
+    "text": "desserts",
+    "passed": true
+  },
+  "structured_burst": {
+    "requests": 20,
+    "http_500s": 0,
+    "correct": 20,
+    "records": [
+      {
+        "index": 0,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 391}"
+      },
+      {
+        "index": 1,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 432}"
+      },
+      {
+        "index": 2,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 475}"
+      },
+      {
+        "index": 3,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 520}"
+      },
+      {
+        "index": 4,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 567}"
+      },
+      {
+        "index": 5,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 616}"
+      },
+      {
+        "index": 6,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 667}"
+      },
+      {
+        "index": 7,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 720}"
+      },
+      {
+        "index": 8,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 775}"
+      },
+      {
+        "index": 9,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 832}"
+      },
+      {
+        "index": 10,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 891}"
+      },
+      {
+        "index": 11,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 952}"
+      },
+      {
+        "index": 12,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1015}"
+      },
+      {
+        "index": 13,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1080}"
+      },
+      {
+        "index": 14,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1147}"
+      },
+      {
+        "index": 15,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1216}"
+      },
+      {
+        "index": 16,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1287}"
+      },
+      {
+        "index": 17,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1360}"
+      },
+      {
+        "index": 18,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1435}"
+      },
+      {
+        "index": 19,
+        "status": 200,
+        "passed": true,
+        "body": "{\"answer\": 1512}"
+      }
+    ]
+  },
+  "passed": true
+}
