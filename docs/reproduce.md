@@ -11,21 +11,23 @@ python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
 ```
 
-The release index is `evidence/index.json`. It contains the exact asset names, compressed hashes, unpacked-file hashes, coverage and exclusions. A remote URL is deliberately not specified until a release has actually been published.
+The release index is `evidence/index.json`. It contains the exact asset names, compressed hashes, unpacked-file hashes, coverage and exclusions.
 
-For a local review bundle whose assets are in `release-assets/evidence-v1`:
+Download the public text/source bundle without the large numerical arrays:
 
 ```sh
 .venv/bin/python tools/download_evidence.py \
   --manifest evidence/index.json \
-  --release-base-url "file://$PWD/release-assets/evidence-v1/" \
+  --release-base-url "https://github.com/jcartu/glm53-orca-qualification/releases/download/qualification-2026-09-19/" \
   --output "$PWD/.local/evidence-text" \
   --assets text
 ```
 
+For an existing local copy of the release assets, use `--release-base-url "file://$PWD/release-assets/evidence-v1/"` instead.
+
 `text` restores the raw text, source, configuration, prompt/response and score records without the large NumPy captures. Use `--assets all` with a fresh output directory for the full evidence tree. The downloader refuses an existing destination, verifies every selected asset and file, and labels a text-only restore as a subset.
 
-Regenerate the core tables without calling a model:
+Regenerate all result tables without calling a model:
 
 ```sh
 .venv/bin/python tools/summarize_results.py \
