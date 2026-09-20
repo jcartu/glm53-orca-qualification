@@ -24,7 +24,9 @@ load-time scale bugs), and with those fixed the real speed appears.
 
 Headline refusal finding (adjudicated, 4 arms, 50 prompts): on harmful
 requests the original and NVIDIA models gave **0/15** actionable answers;
-both Orca arms gave **11/15**. Over-refusal on benign sensitive prompts:
+both Orca arms gave **12/15** (a second independent judge pass scored 11/15;
+the one-prompt disagreement is flagged as borderline in the matrix).
+Over-refusal on benign sensitive prompts:
 **0/20 for every arm**. The shift is abliteration, not quantization, and not
 the speed patches. Nothing was promoted; production still serves the NVIDIA
 checkpoint.
@@ -74,7 +76,28 @@ The captures use the same token IDs, runtime image, TP4, eager execution, and FP
 
 ## Sustained decode speed
 
-Two 45-second measurements per cell. The table shows the mean at nominal zero extra context. **C4 and C8 are aggregate throughput across all streams, not speed per user.**
+**Current (2026-09-20, fast path with the load-time scale fixes):** two
+30-second trials per cell, zero errors in every cell. C1 = one user;
+C4/C8 = aggregate across all users.
+
+| Mode | C1 tok/s | C4 aggregate tok/s | C8 aggregate tok/s |
+|---|---:|---:|---:|
+| Orca NVFP4, MTP-3 (recommended) | 299-304 | 656-666 | 884-912 |
+| Orca NVFP4, DFlash2 K7 | 239-248 | 486-517 | 717-744 |
+| Orca NVFP4, no speculation | 189 | 524 | 777 |
+
+At 32K context the same modes stay in the same range (MTP-3 C1 302-305);
+32K prefill is ~11,000 tok/s; MTP-3 draft acceptance 0.40-0.55. Evidence:
+`results/orca-fastpath-20260920/speed-*.json`; recipe and patches in
+`campaign/kraken-orca/`; plain-English explanation in
+[docs/plain-english-report.md](docs/plain-english-report.md).
+
+### Historical: conservative correctness-first profile (2026-09-19)
+
+The table below is from the original qualification on the conservative
+Marlin W4A16 / piecewise-graph profile (two 45-second trials per cell).
+**These numbers are not the checkpoint's ceiling and must not be quoted as
+Orca's speed** - they document the correctness-first baseline only.
 
 | Profile | C1 tok/s | C4 total tok/s | C8 total tok/s |
 |---|---:|---:|---:|
@@ -83,13 +106,18 @@ Two 45-second measurements per cell. The table shows the mean at nominal zero ex
 | Orca NVFP4, MTP-3 | 31.59 | 125.71 | 223.77 |
 | Orca NVFP4, DFlash2-7 | 33.33 | 114.25 | 227.47 |
 
-These are the conservative **Marlin/piecewise-graph test profiles**, not the existing production server's normal configuration or its performance. Both speculative modes completed the capability/API/vision checks and both speed trials; their exact scores and failures remain in the data.
+The full historical matrices also cover nominal 32K and 128K contexts. Four
+cells exceed a 2% **sample-CV** flag; two exceed 2% under either sample or
+population CV. Both definitions and every raw sample are reported. We did not
+rerun noisy cells until they looked good.
 
-The full matrices also cover nominal 32K and 128K contexts. Four cells exceed a 2% **sample-CV** flag; two exceed 2% under either sample or population CV. Both definitions and every raw sample are reported. We did not rerun noisy cells until they looked good.
+[Full historical throughput table](results/throughput.csv) ·
+[Definitions and variability](results/throughput.json)
 
-[Full throughput table](results/throughput.csv) · [Definitions and variability](results/throughput.json)
-
-Steady speculative counters and the client-side prefill scouting observations are also retained: [acceptance and verifier steps](results/speculation.json) · [prefill measurements](results/prefill.csv). The scouts are not a standalone sustained prefill benchmark.
+Steady speculative counters and the client-side prefill scouting observations
+are also retained: [acceptance and verifier steps](results/speculation.json) ·
+[prefill measurements](results/prefill.csv). The scouts are not a standalone
+sustained prefill benchmark.
 
 ## Runtime findings that matter
 

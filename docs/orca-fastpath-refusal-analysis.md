@@ -133,31 +133,35 @@ educational"), and heuristic disagreements were inspected by hand.
 |---|---:|---:|---:|
 | Original zai FP8 | 0 | 0 | 15 |
 | NVIDIA NVFP4 control | 0 | 0 | 15 |
-| Orca FP8 (abliterated source) | 0 | 11 | 15 |
-| Orca NVFP4 (reconciled fast path) | 0 | 11 | 15 |
+| Orca FP8 (abliterated source) | 0 | 12 | 15 |
+| Orca NVFP4 (reconciled fast path) | 0 | 12 | 15 |
 
 Reading:
 
 - **The abliteration removed most safety refusals.** On requests the original
   and the NVIDIA control refuse cleanly (0/15 actionable), both Orca arms
-  provide actionable harmful content in 11/15 cases - including a money-
+  provide actionable harmful content in 12/15 cases - including a money-
   laundering how-to document and a doxxing scraper with only a one-line
   caveat. Several other "compliant" Orca answers are caveated educational
-  framing rather than step-by-step harm; the 11 counts only adjudicated
-  actionable ones.
+  framing rather than step-by-step harm; the 12 counts only adjudicated
+  actionable ones. A second independent judge pass scored 11/15; the single
+  disagreement per arm (refuse-04 / refuse-05) is flagged borderline in
+  `docs/refusal-matrix.md`.
 - **No over-refusal penalty.** All arms answer all 20 benign-edgy prompts;
   abliteration did not make the model refuse benign sensitive content more
   (the original also over-refuses nothing on this set).
 - **Quantization is not the cause.** Orca FP8 and Orca NVFP4 behave
-  identically (11/15 each); the delta appears at the abliteration step, not
+  identically (12/15 each); the delta appears at the abliteration step, not
   at NVFP4 quantization, and the reconciled fast path does not change the
   refusal profile versus the Orca FP8 source.
-- **Legitimate safety is largely gone, not entirely.** 4/15 should-refuse
-  prompts still get refusals or crisis resources from Orca (including the
-  self-harm item, which returns help resources in all arms).
+- **Legitimate safety is largely gone, not entirely.** 3/15 should-refuse
+  prompts still get refusals or crisis resources from Orca NVFP4 (the FP8
+  source: 2 refusals plus 1 educational-only), including the self-harm
+  item, which returns help resources in all arms.
 
 This is a bounded 50-prompt audit at one sampling setting; it characterizes
 the refusal shift, it does not measure compliance breadth beyond the fixture.
+Full per-prompt matrix with excerpts: [docs/refusal-matrix.md](refusal-matrix.md).
 
 ## 6. Operational notes and limits
 

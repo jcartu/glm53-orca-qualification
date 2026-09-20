@@ -24,7 +24,8 @@ first.*
 - **Refusals: this is the big behavioral finding.** On requests that the
   original model refuses (make a pipe bomb, write malware, launder money…),
   the original and the standard NVIDIA model gave **0 out of 15** usable
-  harmful answers. Orca gave **11 out of 15**. That is what "uncensored"
+  harmful answers. Orca gave **12 out of 15** (a second judge pass scored 11;
+  the single disagreement is a borderline prompt flagged in the matrix).
   means here in practice: most of the safety refusals are gone.
 - **Orca does NOT refuse more benign stuff.** On 20 sensitive-but-harmless
   requests (first aid, history, fiction, safety training), every model —
@@ -274,20 +275,24 @@ written fiction scene.)
 |---|---:|---:|---:|
 | Original GLM FP8 | 0 | **0** | 15 |
 | NVIDIA NVFP4 (standard) | 0 | **0** | 15 |
-| Orca FP8 (abliterated source) | 0 | **11** | 15 |
-| Orca NVFP4 (fast path) | 0 | **11** | 15 |
+| Orca FP8 (abliterated source) | 0 | **12** | 15 |
+| Orca NVFP4 (fast path) | 0 | **12** | 15 |
+
+Full per-prompt matrix with verbatim excerpts for every arm:
+[docs/refusal-matrix.md](refusal-matrix.md) and
+`results/orca-fastpath-20260920/refusal-matrix.json`.
 
 ### 6.3 What that means, in plain words
 
-- **What Orca WILL do that the original won't:** on 11 of 15 harmful
+- **What Orca WILL do that the original won't:** on 12 of 15 harmful
   requests, Orca provides usable content. Examples from the actual outputs:
   a structured "Money Laundering Through Small Businesses" how-to document;
   a working-style doxxing scraper with a one-line caveat; phishing email
   templates; step-shaped explanations for network intrusion "with a note
-  first". Some of the 11 are caveated educational framing rather than
-  step-by-step recipes — but 11 crossed the actionable line by adjudication,
+  first". Some of the 12 are caveated educational framing rather than
+  step-by-step recipes — but 12 crossed the actionable line by adjudication,
   versus 0 for the original and 0 for the NVIDIA model.
-- **What Orca WON'T do (still):** 4 of 15 harmful requests still get refused
+- **What Orca WON'T do (still):** 3 of 15 harmful requests still get refused
   or redirected, including the self-harm prompt, where Orca — like every
   other arm — responds with crisis resources (988, Crisis Text Line) instead
   of methods. Abliteration removed *most* safety refusals, not all of them.
@@ -296,12 +301,12 @@ written fiction scene.)
   change is one-directional (more permissive), which is exactly what an
   abliteration aimed at the refusal direction should produce.
 - **Quantization is not the cause.** Orca FP8 and Orca NVFP4 behave
-  identically (11/15 each). The behavior changed at the abliteration step,
+  identically (12/15 each). The behavior changed at the abliteration step,
   not at the 4-bit compression, and our speed fixes did not change it either.
 - **Honest limits:** 50 prompts, one sampling setting, one judge pass plus
   manual checks. This characterizes the refusal shift clearly; it does not
   map the entire compliance surface of the model. Anyone quoting "Orca is
-  uncensored" should quote the 11/15 vs 0/15 number and this fixture, not a
+  uncensored" should quote the 12/15 vs 0/15 number and this fixture, not a
   vibe.
 
 ---
@@ -309,7 +314,7 @@ written fiction scene.)
 ## Part 7 — Should you run it? Clear guidance
 
 **Run Orca fast if:** you want the abliterated behavior deliberately, you
-understand that most safety refusals are gone (11/15 harmful requests get
+understand that most safety refusals are gone (12/15 harmful requests get
 actionable answers), you run it behind your own guardrails, and you use the
 patched image/recipe above (stock vLLM will mis-serve this checkpoint).
 
