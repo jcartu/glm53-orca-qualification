@@ -108,7 +108,7 @@ The full **3,600-second MTP-3 soak** recorded 1,289 logical workload attempts: *
 
 The complete bundle contains **7,291 files in 97 assets: 27.87 GB compressed, 61.56 GB unpacked**. A **59.71 MB text-only asset** restores 7,195 files without the 96 numerical arrays. Every asset is below GitHub's 2 GiB per-asset limit.
 
-Both full and text-only restores were exercised. All 12 reported result artifacts were regenerated from restored data with identical values; 23 offline privacy/integrity regressions pass. [Verification receipt](results/publication-verification.json)
+Both full and text-only restores were exercised. All 12 reported result artifacts were regenerated from restored data with identical values; 23 offline privacy/integrity regressions pass. [Pre-publication verification receipt](results/publication-verification.json)
 
 The fidelity capture directory occupies approximately **60.9 GB (56.7 GiB)**. Its bulky arrays belong in separately downloadable, checksummed release assets—not in Git history. The export includes successful, failed and interrupted attempts. Model weights, private authorization material, generated caches and vendor runtime binaries available from the pinned image are excluded; every excluded file is accounted for with a reason.
 
@@ -119,7 +119,7 @@ For concrete download, analysis, image-build and guarded-run commands, see
 
 The downloader verifies compressed assets and unpacked files, rejects unsafe archive paths and extensions, and installs only a verified tree. `--assets text` restores text/source evidence without fetching the numerical arrays; `--assets all` restores the full export. The subset is never labeled complete.
 
-Use the [repository's releases](https://github.com/jcartu/glm53-orca-qualification/releases) for raw-data assets together with `evidence/index.json`. A source-code ZIP alone does not contain the numerical captures.
+The [complete evidence release](https://github.com/jcartu/glm53-orca-qualification/releases/tag/qualification-2026-09-19) contains all 97 assets. Their uploaded sizes and SHA-256 hashes match the manifest, and an unauthenticated full download restored all 7,291 files and reproduced all 12 result artifacts. [Public verification receipt](evidence/publication.json). A source-code ZIP alone does not contain the numerical captures.
 
 ## Reproduction and safety
 

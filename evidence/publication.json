@@ -1,6 +1,6 @@
 {
   "schema": "glm53-orca-github-publication.v1",
-  "status": "approved_upload_pending",
+  "status": "published_verified",
   "repository": "jcartu/glm53-orca-qualification",
   "repository_url": "https://github.com/jcartu/glm53-orca-qualification",
   "visibility": "public",
@@ -15,5 +15,667 @@
   "expected_assets": 97,
   "expected_asset_bytes": 27870237048,
   "historical_local_verification": "results/publication-verification.json",
-  "note": "The historical local-verification receipt predates publication and is preserved unchanged. Existing third-party licenses remain in effect."
+  "note": "The historical local-verification receipt predates publication and is preserved unchanged. Existing third-party licenses remain in effect.",
+  "release_id": 392303744,
+  "release_url": "https://github.com/jcartu/glm53-orca-qualification/releases/tag/qualification-2026-09-19",
+  "release_base_url": "https://github.com/jcartu/glm53-orca-qualification/releases/download/qualification-2026-09-19/",
+  "release_source_commit": "cf9d10bf2601b910df1db55f2d2473297160c6f4",
+  "published_at": "2026-09-20T03:58:28Z",
+  "github_repository_license": null,
+  "remote_asset_verification": {
+    "assets": 97,
+    "bytes": 27870237048,
+    "size_mismatches": 0,
+    "sha256_mismatches": 0,
+    "source": "GitHub release asset API, also checked anonymously"
+  },
+  "anonymous_access": {
+    "repository_http": 200,
+    "release_http": 200,
+    "authorization_header_sent": false
+  },
+  "public_full_restore": {
+    "asset_selection": "all",
+    "complete": true,
+    "assets": 97,
+    "files": 7291,
+    "omitted_assets": 0,
+    "omitted_files": 0,
+    "elapsed_seconds": 1271.6,
+    "github_token_environment_cleared": true
+  },
+  "results_recomputed_from_public_download": [
+    {
+      "file": "collision-rates.svg",
+      "matches": true
+    },
+    {
+      "file": "collision.csv",
+      "matches": true
+    },
+    {
+      "file": "fidelity.json",
+      "matches": true
+    },
+    {
+      "file": "long-context.json",
+      "matches": true
+    },
+    {
+      "file": "model-quality.csv",
+      "matches": true
+    },
+    {
+      "file": "model-quality.json",
+      "matches": true
+    },
+    {
+      "file": "operations.json",
+      "matches": true
+    },
+    {
+      "file": "prefill.csv",
+      "matches": true
+    },
+    {
+      "file": "prefill.json",
+      "matches": true
+    },
+    {
+      "file": "speculation.json",
+      "matches": true
+    },
+    {
+      "file": "throughput.csv",
+      "matches": true
+    },
+    {
+      "file": "throughput.json",
+      "matches": true
+    }
+  ],
+  "assets": [
+    {
+      "name": "evidence-0001.tar.zst",
+      "id": 576054163,
+      "bytes": 59714837,
+      "digest": "sha256:14e9b301e7bf8e6f908feed504b637e0f83c306104c898aae24054961bb97be9"
+    },
+    {
+      "name": "numeric-001-ca9f07ed7d41-panel-00-wikitext2-test-00.logprobs.npy.zst",
+      "id": 576054164,
+      "bytes": 571773856,
+      "digest": "sha256:f412a232c4a064bda8db3008c516343676fb40bc50bf88432f043b4bdf6599cc"
+    },
+    {
+      "name": "numeric-002-bd0aa0eac4bc-panel-00-wikitext2-test-00.tokens.npy.zst",
+      "id": 576054160,
+      "bytes": 3202,
+      "digest": "sha256:ad65aae3e81e2d3c578914699358d2c2b2ed18960232b032ffcebf52cab22098"
+    },
+    {
+      "name": "numeric-003-0dcad19b59ab-panel-01-wikitext2-test-01.logprobs.npy.zst",
+      "id": 576054161,
+      "bytes": 572183241,
+      "digest": "sha256:18ca33e03a4f86db5fb2e40f47c587893eb4d7bdf29f66e2b34a81154176ff34"
+    },
+    {
+      "name": "numeric-004-680301be9785-panel-01-wikitext2-test-01.tokens.npy.zst",
+      "id": 576054156,
+      "bytes": 3753,
+      "digest": "sha256:01c40821a2f2426914c75ed27db0a0bbf409f49a27edc0ceb1e85532972e1668"
+    },
+    {
+      "name": "numeric-005-64a12bf3f7d0-panel-02-wikitext2-test-02.logprobs.npy.zst",
+      "id": 576054184,
+      "bytes": 575147386,
+      "digest": "sha256:d31e553e9afa3d37f50d7c39efc89c5dd0a184920dc2083ba236b91937f19271"
+    },
+    {
+      "name": "numeric-006-00c3c722a640-panel-02-wikitext2-test-02.tokens.npy.zst",
+      "id": 576054181,
+      "bytes": 3888,
+      "digest": "sha256:bf8664d2a2ca6dd4ca35c6721dc1997f359491293e06ac7854815196c8457d39"
+    },
+    {
+      "name": "numeric-007-5b921944ef0c-panel-03-wikitext2-test-03.logprobs.npy.zst",
+      "id": 576054210,
+      "bytes": 576707724,
+      "digest": "sha256:24ac6b7ef4c68ca14839dd8f822ccd6cc40b42d48499844878905ace33ae88f9"
+    },
+    {
+      "name": "numeric-008-a783eed45162-panel-03-wikitext2-test-03.tokens.npy.zst",
+      "id": 576054254,
+      "bytes": 3700,
+      "digest": "sha256:3437d9804f7a2d0f5fcd76e4cddc9ee9b3b36e0f5ff69ee3e0a1f53895c65f02"
+    },
+    {
+      "name": "numeric-009-6292be4a3c04-panel-04-wikitext2-test-04.logprobs.npy.zst",
+      "id": 576054271,
+      "bytes": 575162262,
+      "digest": "sha256:6730903cfa24e6eb70a646641fc68a2de6940f18bbb764b2fd6a0c7df1376fc7"
+    },
+    {
+      "name": "numeric-010-fee2c7aee2e3-panel-04-wikitext2-test-04.tokens.npy.zst",
+      "id": 576054876,
+      "bytes": 3618,
+      "digest": "sha256:2b0c1b0f4bae154056c2757feb94ab610a8501d45f290b9b039c3fa13f7b3ff8"
+    },
+    {
+      "name": "numeric-011-84cb82679457-panel-05-wikitext2-test-05.logprobs.npy.zst",
+      "id": 576054885,
+      "bytes": 575917077,
+      "digest": "sha256:76bf73f1232880b3dac1cec3ec272d27b8cf2436d4dd6b0bc42aeb33f7f65208"
+    },
+    {
+      "name": "numeric-012-4220181c0aad-panel-05-wikitext2-test-05.tokens.npy.zst",
+      "id": 576054940,
+      "bytes": 3103,
+      "digest": "sha256:36a282d93f6a28b7e3fa95e4457eeacacdc8ee3a0ab3fc8370f2ec83437a85be"
+    },
+    {
+      "name": "numeric-013-cf0c168a66e5-panel-06-wikitext2-test-06.logprobs.npy.zst",
+      "id": 576054947,
+      "bytes": 574948317,
+      "digest": "sha256:140740ad9fe197352a039cfe9b1b80fc8ba54a9fa80127e06f52016ccdee4ed1"
+    },
+    {
+      "name": "numeric-014-abdf585d6188-panel-06-wikitext2-test-06.tokens.npy.zst",
+      "id": 576054946,
+      "bytes": 3112,
+      "digest": "sha256:2bd29a1821bae1659d47845207f660142132ec2dc8dd32d30d39e1831c25e79f"
+    },
+    {
+      "name": "numeric-015-6fce8d397441-panel-07-wikitext2-test-07.logprobs.npy.zst",
+      "id": 576054957,
+      "bytes": 576337276,
+      "digest": "sha256:46ce3b4da6b78e4ca6b8122989619cd7f623777c1fa2d764820655f15e5677e2"
+    },
+    {
+      "name": "numeric-016-9e70d5096b5b-panel-07-wikitext2-test-07.tokens.npy.zst",
+      "id": 576054967,
+      "bytes": 3371,
+      "digest": "sha256:8112854786514b1f13bbb159f438af3c1776e05d7a41b9c35bdb335ccbd09df9"
+    },
+    {
+      "name": "numeric-017-2833af63e5f8-panel-08-wikitext2-test-08.logprobs.npy.zst",
+      "id": 576054965,
+      "bytes": 577285589,
+      "digest": "sha256:550288f3b3a1db7f3d7ee90713a8f47b7580fa3df28283e2b20466cb5f59ed90"
+    },
+    {
+      "name": "numeric-018-bbd6d06c8e0a-panel-08-wikitext2-test-08.tokens.npy.zst",
+      "id": 576054989,
+      "bytes": 3757,
+      "digest": "sha256:37b201830ca0bd8467c9370953c0021ff6db561097f50f211e6f5fe7950f4f7f"
+    },
+    {
+      "name": "numeric-019-8f5d41bb2f7f-panel-09-wikitext2-test-09.logprobs.npy.zst",
+      "id": 576055009,
+      "bytes": 578133754,
+      "digest": "sha256:b146d7dd539dd80954d87e3b2afc76aa4c8d9ee406f20448758e107449cca40f"
+    },
+    {
+      "name": "numeric-020-05aa6b0e871e-panel-09-wikitext2-test-09.tokens.npy.zst",
+      "id": 576055515,
+      "bytes": 3411,
+      "digest": "sha256:bda2a6db81698574e09bd952de7ea456872da645c105a1cfea86d73e944c1de7"
+    },
+    {
+      "name": "numeric-021-be915a235d78-panel-10-wikitext2-test-10.logprobs.npy.zst",
+      "id": 576055534,
+      "bytes": 577024161,
+      "digest": "sha256:6bfdc5195db14de69858cda6978ab440ceb2377949a252c779688560e0d5157f"
+    },
+    {
+      "name": "numeric-022-b1c52f5b7b47-panel-10-wikitext2-test-10.tokens.npy.zst",
+      "id": 576055605,
+      "bytes": 3511,
+      "digest": "sha256:a9d7b9173ff58269cd92867f75c8f800cdd2e25c50755f43a2ab9070979e0f83"
+    },
+    {
+      "name": "numeric-023-1de0b12ce83c-panel-11-wikitext2-test-11.logprobs.npy.zst",
+      "id": 576055624,
+      "bytes": 579027291,
+      "digest": "sha256:763ed93d09e5f90686fbe9f5d244bf0c13fd27a8e84b92f07947b63f315d1833"
+    },
+    {
+      "name": "numeric-024-abdbc4ab7cfb-panel-11-wikitext2-test-11.tokens.npy.zst",
+      "id": 576055635,
+      "bytes": 3736,
+      "digest": "sha256:32580fe73f21adfc803d226afda5b4a4f0d64d2c718b6907b5f54dd8396fe2d3"
+    },
+    {
+      "name": "numeric-025-5eef0dedd6b2-panel-12-benign-representative-prose.logprobs.npy.zst",
+      "id": 576055644,
+      "bytes": 585583363,
+      "digest": "sha256:233c5ad855260260116cf302cf86f78d74f04356dae18ca13ec1ba4d0512d0b7"
+    },
+    {
+      "name": "numeric-026-26c63d8cded4-panel-12-benign-representative-prose.tokens.npy.zst",
+      "id": 576055660,
+      "bytes": 3245,
+      "digest": "sha256:1ed5d1c0338e10e10e87e3d0673109b99e317e4c91e800e0295f5807cdb8b776"
+    },
+    {
+      "name": "numeric-027-a85614c041f5-panel-13-benign-python-code.logprobs.npy.zst",
+      "id": 576055674,
+      "bytes": 600131630,
+      "digest": "sha256:867c372ec8df0fd0c95b8f282262cae9b66014aec00945c49cde6c073d8b7493"
+    },
+    {
+      "name": "numeric-028-9493f851f2d7-panel-13-benign-python-code.tokens.npy.zst",
+      "id": 576055817,
+      "bytes": 2320,
+      "digest": "sha256:60ba679da5ba01187e0d86bcd4818afc6eaec5a5368eda5dc2e0781a9c7737fc"
+    },
+    {
+      "name": "numeric-029-e4cd53ccd703-panel-14-benign-reasoning-workbook.logprobs.npy.zst",
+      "id": 576055834,
+      "bytes": 580347307,
+      "digest": "sha256:d6d9a72ff683c04462cff6c79607ab33ad8263d74cd5f7255d535bc4c160bc5a"
+    },
+    {
+      "name": "numeric-030-eac5e2134892-panel-14-benign-reasoning-workbook.tokens.npy.zst",
+      "id": 576056086,
+      "bytes": 3287,
+      "digest": "sha256:269dce5b91c92768355cc240677bdcf1a848ffeee757f5484c88d0a71d799f7d"
+    },
+    {
+      "name": "numeric-031-1763068521ac-panel-15-benign-structured-tools.logprobs.npy.zst",
+      "id": 576056119,
+      "bytes": 594474803,
+      "digest": "sha256:d543bf3cd7feeaebc3e05923a79c8b2b6f6fd3d62365b043818145426c417c77"
+    },
+    {
+      "name": "numeric-032-e76c32977ba2-panel-15-benign-structured-tools.tokens.npy.zst",
+      "id": 576056266,
+      "bytes": 3234,
+      "digest": "sha256:f5a68352c5a6d37999865a3ee7393f845014e46aa3b3bee09b267f890f716282"
+    },
+    {
+      "name": "numeric-033-13a857f6b9b5-panel-00-wikitext2-test-00.logprobs.npy.zst",
+      "id": 576056453,
+      "bytes": 572664560,
+      "digest": "sha256:d802d7818fabf40e811e89d35c5247fca7810cc2479b156e0c28107860b0582e"
+    },
+    {
+      "name": "numeric-034-a1c3e4470300-panel-00-wikitext2-test-00.tokens.npy.zst",
+      "id": 576056463,
+      "bytes": 3202,
+      "digest": "sha256:ad65aae3e81e2d3c578914699358d2c2b2ed18960232b032ffcebf52cab22098"
+    },
+    {
+      "name": "numeric-035-28a496c28ebe-panel-01-wikitext2-test-01.logprobs.npy.zst",
+      "id": 576056492,
+      "bytes": 572038658,
+      "digest": "sha256:3597a4255bf1043d50fbf1a3d9df89a489c9b0a7428629a2304e903704408136"
+    },
+    {
+      "name": "numeric-036-36c358ea6c38-panel-01-wikitext2-test-01.tokens.npy.zst",
+      "id": 576056490,
+      "bytes": 3753,
+      "digest": "sha256:01c40821a2f2426914c75ed27db0a0bbf409f49a27edc0ceb1e85532972e1668"
+    },
+    {
+      "name": "numeric-037-72d9f10ec5a7-panel-02-wikitext2-test-02.logprobs.npy.zst",
+      "id": 576056495,
+      "bytes": 573600085,
+      "digest": "sha256:50139eaeffb07b8841c2a2de543f9c408841373192e74979234fbd6f1ca5eefa"
+    },
+    {
+      "name": "numeric-038-8f237008fa74-panel-02-wikitext2-test-02.tokens.npy.zst",
+      "id": 576056502,
+      "bytes": 3888,
+      "digest": "sha256:bf8664d2a2ca6dd4ca35c6721dc1997f359491293e06ac7854815196c8457d39"
+    },
+    {
+      "name": "numeric-039-b54711103a60-panel-03-wikitext2-test-03.logprobs.npy.zst",
+      "id": 576056513,
+      "bytes": 576377026,
+      "digest": "sha256:aadf6f03cc78ab3cda61f3485ba093006ea414345a371119fda25a227776c65c"
+    },
+    {
+      "name": "numeric-040-05e94f890d36-panel-03-wikitext2-test-03.tokens.npy.zst",
+      "id": 576056743,
+      "bytes": 3700,
+      "digest": "sha256:3437d9804f7a2d0f5fcd76e4cddc9ee9b3b36e0f5ff69ee3e0a1f53895c65f02"
+    },
+    {
+      "name": "numeric-041-0d3e29a6d32b-panel-04-wikitext2-test-04.logprobs.npy.zst",
+      "id": 576056776,
+      "bytes": 575523844,
+      "digest": "sha256:a4381c2bddf11d90ed92fe5b92cc34ebc01712f8f2136d9884ce7b1ea1657967"
+    },
+    {
+      "name": "numeric-042-a519bb914dbd-panel-04-wikitext2-test-04.tokens.npy.zst",
+      "id": 576057171,
+      "bytes": 3618,
+      "digest": "sha256:2b0c1b0f4bae154056c2757feb94ab610a8501d45f290b9b039c3fa13f7b3ff8"
+    },
+    {
+      "name": "numeric-043-07144bcd9014-panel-05-wikitext2-test-05.logprobs.npy.zst",
+      "id": 576057178,
+      "bytes": 577033127,
+      "digest": "sha256:7ca8e9b79dcd6c68dd02043b1fd373c39f67a9d79ace00d2d729b84264d5bf85"
+    },
+    {
+      "name": "numeric-044-6f84bb660086-panel-05-wikitext2-test-05.tokens.npy.zst",
+      "id": 576057209,
+      "bytes": 3103,
+      "digest": "sha256:36a282d93f6a28b7e3fa95e4457eeacacdc8ee3a0ab3fc8370f2ec83437a85be"
+    },
+    {
+      "name": "numeric-045-9fe3458f951c-panel-06-wikitext2-test-06.logprobs.npy.zst",
+      "id": 576057210,
+      "bytes": 575708336,
+      "digest": "sha256:28359470094f43262600a1337266fa24942ada42d7fda166e783f4ac851d098e"
+    },
+    {
+      "name": "numeric-046-7cd91f48c0f8-panel-06-wikitext2-test-06.tokens.npy.zst",
+      "id": 576057222,
+      "bytes": 3112,
+      "digest": "sha256:2bd29a1821bae1659d47845207f660142132ec2dc8dd32d30d39e1831c25e79f"
+    },
+    {
+      "name": "numeric-047-72ec6c0c4333-panel-07-wikitext2-test-07.logprobs.npy.zst",
+      "id": 576057236,
+      "bytes": 575682070,
+      "digest": "sha256:4235347c85d48bc7a1151e973feb426d072be64d28ac4cd03beacf7f204e1792"
+    },
+    {
+      "name": "numeric-048-4fee70d67050-panel-07-wikitext2-test-07.tokens.npy.zst",
+      "id": 576057248,
+      "bytes": 3371,
+      "digest": "sha256:8112854786514b1f13bbb159f438af3c1776e05d7a41b9c35bdb335ccbd09df9"
+    },
+    {
+      "name": "numeric-049-11d0c72ffabf-panel-08-wikitext2-test-08.logprobs.npy.zst",
+      "id": 576057268,
+      "bytes": 576186131,
+      "digest": "sha256:6a11f5db72a8881b17ddf39f6cbf9a669e1b270943687ea18e714d0e9fdfd902"
+    },
+    {
+      "name": "numeric-050-59dbbc317f4c-panel-08-wikitext2-test-08.tokens.npy.zst",
+      "id": 576057389,
+      "bytes": 3757,
+      "digest": "sha256:37b201830ca0bd8467c9370953c0021ff6db561097f50f211e6f5fe7950f4f7f"
+    },
+    {
+      "name": "numeric-051-97c909cd91cd-panel-09-wikitext2-test-09.logprobs.npy.zst",
+      "id": 576057411,
+      "bytes": 578242889,
+      "digest": "sha256:dabbef3582acae04232f576c21d96e2aa7fb9723fc1c094f6b6ffe4a1ecca237"
+    },
+    {
+      "name": "numeric-052-44646132ec71-panel-09-wikitext2-test-09.tokens.npy.zst",
+      "id": 576057791,
+      "bytes": 3411,
+      "digest": "sha256:bda2a6db81698574e09bd952de7ea456872da645c105a1cfea86d73e944c1de7"
+    },
+    {
+      "name": "numeric-053-f1ffe2702e81-panel-10-wikitext2-test-10.logprobs.npy.zst",
+      "id": 576057807,
+      "bytes": 576991742,
+      "digest": "sha256:f743b6983240dcda51c5f49815b4e71fd3d98f29aebfae3bd23ddcbb6ceaefd1"
+    },
+    {
+      "name": "numeric-054-8a3b8f6b5e92-panel-10-wikitext2-test-10.tokens.npy.zst",
+      "id": 576057918,
+      "bytes": 3511,
+      "digest": "sha256:a9d7b9173ff58269cd92867f75c8f800cdd2e25c50755f43a2ab9070979e0f83"
+    },
+    {
+      "name": "numeric-055-6a9b0ce9eaf9-panel-11-wikitext2-test-11.logprobs.npy.zst",
+      "id": 576057953,
+      "bytes": 578535938,
+      "digest": "sha256:4df550d0f5983f8d8342cf9be9bd89f4845ad8e25cbf9adcfd96fbde9ee4e015"
+    },
+    {
+      "name": "numeric-056-5d92e7d15cf6-panel-11-wikitext2-test-11.tokens.npy.zst",
+      "id": 576057954,
+      "bytes": 3736,
+      "digest": "sha256:32580fe73f21adfc803d226afda5b4a4f0d64d2c718b6907b5f54dd8396fe2d3"
+    },
+    {
+      "name": "numeric-057-304452eb272e-panel-12-benign-representative-prose.logprobs.npy.zst",
+      "id": 576057960,
+      "bytes": 586829338,
+      "digest": "sha256:a214ca70771274f398056d7cc12705d899e46fc18a27065599dd7d8fcc4cfcf5"
+    },
+    {
+      "name": "numeric-058-36f6debd23be-panel-12-benign-representative-prose.tokens.npy.zst",
+      "id": 576057969,
+      "bytes": 3245,
+      "digest": "sha256:1ed5d1c0338e10e10e87e3d0673109b99e317e4c91e800e0295f5807cdb8b776"
+    },
+    {
+      "name": "numeric-059-b9546fbed072-panel-13-benign-python-code.logprobs.npy.zst",
+      "id": 576057984,
+      "bytes": 599747315,
+      "digest": "sha256:af240b517960d76d3205c54c028c2c3b3c9b669c6439270964e863f680e95cbe"
+    },
+    {
+      "name": "numeric-060-6d54df799dcc-panel-13-benign-python-code.tokens.npy.zst",
+      "id": 576058039,
+      "bytes": 2320,
+      "digest": "sha256:60ba679da5ba01187e0d86bcd4818afc6eaec5a5368eda5dc2e0781a9c7737fc"
+    },
+    {
+      "name": "numeric-061-abd7a7401cdf-panel-14-benign-reasoning-workbook.logprobs.npy.zst",
+      "id": 576058060,
+      "bytes": 580177043,
+      "digest": "sha256:ff17079b4fcef7bb34761ba0a150cd77a76e174588813495fe8b85bc0f5f9305"
+    },
+    {
+      "name": "numeric-062-1c9d8e0143a3-panel-14-benign-reasoning-workbook.tokens.npy.zst",
+      "id": 576058493,
+      "bytes": 3287,
+      "digest": "sha256:269dce5b91c92768355cc240677bdcf1a848ffeee757f5484c88d0a71d799f7d"
+    },
+    {
+      "name": "numeric-063-9461117895c2-panel-15-benign-structured-tools.logprobs.npy.zst",
+      "id": 576058513,
+      "bytes": 594209265,
+      "digest": "sha256:35504bc577839395e1b0a9f01535e13fd0e7520b4e3bf8d73a4d66740ebe25e0"
+    },
+    {
+      "name": "numeric-064-cc2065ea204b-panel-15-benign-structured-tools.tokens.npy.zst",
+      "id": 576058854,
+      "bytes": 3234,
+      "digest": "sha256:f5a68352c5a6d37999865a3ee7393f845014e46aa3b3bee09b267f890f716282"
+    },
+    {
+      "name": "numeric-065-135dcdfa321c-panel-00-wikitext2-test-00.logprobs.npy.zst",
+      "id": 576058909,
+      "bytes": 573051569,
+      "digest": "sha256:64b36c470b1d8791e772b5554d0aba21e0d2a6cc8f5ae3c3417d0347e5da1d5f"
+    },
+    {
+      "name": "numeric-066-9cb9794e8864-panel-00-wikitext2-test-00.tokens.npy.zst",
+      "id": 576058921,
+      "bytes": 3202,
+      "digest": "sha256:ad65aae3e81e2d3c578914699358d2c2b2ed18960232b032ffcebf52cab22098"
+    },
+    {
+      "name": "numeric-067-7c71d35ba90f-panel-01-wikitext2-test-01.logprobs.npy.zst",
+      "id": 576058923,
+      "bytes": 572062264,
+      "digest": "sha256:e431c93dbcdf097be0c85e8e6ccac547281abcfa282bbb68039671feadd927d2"
+    },
+    {
+      "name": "numeric-068-13782766c611-panel-01-wikitext2-test-01.tokens.npy.zst",
+      "id": 576058933,
+      "bytes": 3753,
+      "digest": "sha256:01c40821a2f2426914c75ed27db0a0bbf409f49a27edc0ceb1e85532972e1668"
+    },
+    {
+      "name": "numeric-069-6335a41912ae-panel-02-wikitext2-test-02.logprobs.npy.zst",
+      "id": 576058944,
+      "bytes": 576008210,
+      "digest": "sha256:c823a3ce3c16e71bb5d44fc447d64e2680c7c611afe66095509242bdac057353"
+    },
+    {
+      "name": "numeric-070-a15648d118b8-panel-02-wikitext2-test-02.tokens.npy.zst",
+      "id": 576058948,
+      "bytes": 3888,
+      "digest": "sha256:bf8664d2a2ca6dd4ca35c6721dc1997f359491293e06ac7854815196c8457d39"
+    },
+    {
+      "name": "numeric-071-82910c755423-panel-03-wikitext2-test-03.logprobs.npy.zst",
+      "id": 576058961,
+      "bytes": 576125930,
+      "digest": "sha256:8d851c471f15fc782457cda6fe02a4771881baafc3f06792989658d1dd862287"
+    },
+    {
+      "name": "numeric-072-c6fdb024a924-panel-03-wikitext2-test-03.tokens.npy.zst",
+      "id": 576059313,
+      "bytes": 3700,
+      "digest": "sha256:3437d9804f7a2d0f5fcd76e4cddc9ee9b3b36e0f5ff69ee3e0a1f53895c65f02"
+    },
+    {
+      "name": "numeric-073-2203388f9733-panel-04-wikitext2-test-04.logprobs.npy.zst",
+      "id": 576059327,
+      "bytes": 573875161,
+      "digest": "sha256:67e8f82de897b9745edb0b182891aa9de423eb234a1eef80df10e43d69332ed3"
+    },
+    {
+      "name": "numeric-074-b7b051db3c9e-panel-04-wikitext2-test-04.tokens.npy.zst",
+      "id": 576059620,
+      "bytes": 3618,
+      "digest": "sha256:2b0c1b0f4bae154056c2757feb94ab610a8501d45f290b9b039c3fa13f7b3ff8"
+    },
+    {
+      "name": "numeric-075-5447f27ea2f7-panel-05-wikitext2-test-05.logprobs.npy.zst",
+      "id": 576059632,
+      "bytes": 576247389,
+      "digest": "sha256:27e9d845c586e6f90488e36523d61337818a98f5ef18ed45af2e0f326466ae89"
+    },
+    {
+      "name": "numeric-076-62b82b27916a-panel-05-wikitext2-test-05.tokens.npy.zst",
+      "id": 576059781,
+      "bytes": 3103,
+      "digest": "sha256:36a282d93f6a28b7e3fa95e4457eeacacdc8ee3a0ab3fc8370f2ec83437a85be"
+    },
+    {
+      "name": "numeric-077-d91605cca8de-panel-06-wikitext2-test-06.logprobs.npy.zst",
+      "id": 576059812,
+      "bytes": 575574272,
+      "digest": "sha256:15ef3717b188eb6d824b86164aee7cb86f2eac660abb284c46e0b732b486b306"
+    },
+    {
+      "name": "numeric-078-88a787be7635-panel-06-wikitext2-test-06.tokens.npy.zst",
+      "id": 576059829,
+      "bytes": 3112,
+      "digest": "sha256:2bd29a1821bae1659d47845207f660142132ec2dc8dd32d30d39e1831c25e79f"
+    },
+    {
+      "name": "numeric-079-adfaba0cac6e-panel-07-wikitext2-test-07.logprobs.npy.zst",
+      "id": 576059842,
+      "bytes": 575613625,
+      "digest": "sha256:92de982b2df31fe5068416a85677155d9cd74094ae6f5735d86cacd519bf4ae8"
+    },
+    {
+      "name": "numeric-080-dca48c1d52b5-panel-07-wikitext2-test-07.tokens.npy.zst",
+      "id": 576059854,
+      "bytes": 3371,
+      "digest": "sha256:8112854786514b1f13bbb159f438af3c1776e05d7a41b9c35bdb335ccbd09df9"
+    },
+    {
+      "name": "numeric-081-36bc5785f413-panel-08-wikitext2-test-08.logprobs.npy.zst",
+      "id": 576059922,
+      "bytes": 576861514,
+      "digest": "sha256:e2093e6c91e4eaa5127ed6bd8f88c3a0ba77d3d8855a2066daaf3b0db767bee3"
+    },
+    {
+      "name": "numeric-082-d9e19f24a300-panel-08-wikitext2-test-08.tokens.npy.zst",
+      "id": 576060114,
+      "bytes": 3757,
+      "digest": "sha256:37b201830ca0bd8467c9370953c0021ff6db561097f50f211e6f5fe7950f4f7f"
+    },
+    {
+      "name": "numeric-083-ac97b3d0afa5-panel-09-wikitext2-test-09.logprobs.npy.zst",
+      "id": 576060131,
+      "bytes": 577872689,
+      "digest": "sha256:99b4b46bbaa92ab74bd91fac75b2cb4897382e5c3780c4ebeb79449152919939"
+    },
+    {
+      "name": "numeric-084-20f4352f8395-panel-09-wikitext2-test-09.tokens.npy.zst",
+      "id": 576060655,
+      "bytes": 3411,
+      "digest": "sha256:bda2a6db81698574e09bd952de7ea456872da645c105a1cfea86d73e944c1de7"
+    },
+    {
+      "name": "numeric-085-dd061e0255db-panel-10-wikitext2-test-10.logprobs.npy.zst",
+      "id": 576060670,
+      "bytes": 576940678,
+      "digest": "sha256:26139afab588973525864c0abfc9e3a3dc6f315ef4a0be08f444209ff1b8593f"
+    },
+    {
+      "name": "numeric-086-7279c1e302bd-panel-10-wikitext2-test-10.tokens.npy.zst",
+      "id": 576060774,
+      "bytes": 3511,
+      "digest": "sha256:a9d7b9173ff58269cd92867f75c8f800cdd2e25c50755f43a2ab9070979e0f83"
+    },
+    {
+      "name": "numeric-087-751da3fbf3f3-panel-11-wikitext2-test-11.logprobs.npy.zst",
+      "id": 576060785,
+      "bytes": 578951684,
+      "digest": "sha256:e58209beac9d16fed15fe8558f0e3df89902c3cf2c9ed51c977d081fb45f9ef4"
+    },
+    {
+      "name": "numeric-088-1661e2143ae9-panel-11-wikitext2-test-11.tokens.npy.zst",
+      "id": 576060802,
+      "bytes": 3736,
+      "digest": "sha256:32580fe73f21adfc803d226afda5b4a4f0d64d2c718b6907b5f54dd8396fe2d3"
+    },
+    {
+      "name": "numeric-089-3e543b1ea47f-panel-12-benign-representative-prose.logprobs.npy.zst",
+      "id": 576060812,
+      "bytes": 586794737,
+      "digest": "sha256:ac5cd2802bbcba4c13a30201b3748d86fa3cf14f251caab96c70ea11db5f1340"
+    },
+    {
+      "name": "numeric-090-16fda44267ea-panel-12-benign-representative-prose.tokens.npy.zst",
+      "id": 576060826,
+      "bytes": 3245,
+      "digest": "sha256:1ed5d1c0338e10e10e87e3d0673109b99e317e4c91e800e0295f5807cdb8b776"
+    },
+    {
+      "name": "numeric-091-511c604ddab5-panel-13-benign-python-code.logprobs.npy.zst",
+      "id": 576060842,
+      "bytes": 600068998,
+      "digest": "sha256:f38f544e988590a62fc3ceac55585094b817a87a44d067e9a19c2a8b5fb3037b"
+    },
+    {
+      "name": "numeric-092-e96d13afb296-panel-13-benign-python-code.tokens.npy.zst",
+      "id": 576060872,
+      "bytes": 2320,
+      "digest": "sha256:60ba679da5ba01187e0d86bcd4818afc6eaec5a5368eda5dc2e0781a9c7737fc"
+    },
+    {
+      "name": "numeric-093-3cedb8fe1014-panel-14-benign-reasoning-workbook.logprobs.npy.zst",
+      "id": 576060878,
+      "bytes": 580347757,
+      "digest": "sha256:dfc85817ad1c58249832dd241d567cca81c5dfe40c165f79a7ec73e811785592"
+    },
+    {
+      "name": "numeric-094-931349b5447a-panel-14-benign-reasoning-workbook.tokens.npy.zst",
+      "id": 576061233,
+      "bytes": 3287,
+      "digest": "sha256:269dce5b91c92768355cc240677bdcf1a848ffeee757f5484c88d0a71d799f7d"
+    },
+    {
+      "name": "numeric-095-31e77d3a932b-panel-15-benign-structured-tools.logprobs.npy.zst",
+      "id": 576061244,
+      "bytes": 594230586,
+      "digest": "sha256:112e476476fd91b103a5be44f15147c4828beddd5d887bc3d10d20fef8c42fba"
+    },
+    {
+      "name": "numeric-096-ff0fd96b8bea-panel-15-benign-structured-tools.tokens.npy.zst",
+      "id": 576061486,
+      "bytes": 3234,
+      "digest": "sha256:f5a68352c5a6d37999865a3ee7393f845014e46aa3b3bee09b267f890f716282"
+    }
+  ]
 }
