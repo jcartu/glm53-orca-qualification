@@ -48,4 +48,4 @@ This repository includes provenance and test results, not those model weights, a
 
 Original material
 ------------------
-No new license for the original code, fixtures or report has been approved. Publication and licensing approval remain separate from these third-party notices.
+The owner approved public publication without a new license grant. No repository-wide license is granted for the original code, fixtures or report. The existing third-party licenses above continue to apply to their respective material.

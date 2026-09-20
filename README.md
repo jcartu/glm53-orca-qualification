@@ -2,7 +2,7 @@
 
 An independent test of the Orca abliterated FP8 and NVFP4 checkpoints on **four RTX PRO 6000 Blackwell 96 GB GPUs**. The questions are straightforward: how much does the model change, which tasks still work, and what does it take to serve the checkpoint correctly?
 
-**Qualification complete: not cleared for production.** The hour-long soak recorded structured-output HTTP 500s, and required cache observability was incomplete. The original production container was restored and verified; the candidate was not promoted. This is a local review copy: **no GitHub publication or new license grant has been approved.**
+**Qualification complete: not cleared for production.** The hour-long soak recorded structured-output HTTP 500s, and required cache observability was incomplete. The original production container was restored and verified; the candidate was not promoted. The owner approved public sharing and chose **no new license grant**.
 
 ## What we know
 
@@ -119,7 +119,7 @@ For concrete download, analysis, image-build and guarded-run commands, see
 
 The downloader verifies compressed assets and unpacked files, rejects unsafe archive paths and extensions, and installs only a verified tree. `--assets text` restores text/source evidence without fetching the numerical arrays; `--assets all` restores the full export. The subset is never labeled complete.
 
-No remote release URL is claimed until publication is approved and the actual assets exist.
+Use the [repository's releases](https://github.com/jcartu/glm53-orca-qualification/releases) for raw-data assets together with `evidence/index.json`. A source-code ZIP alone does not contain the numerical captures.
 
 ## Reproduction and safety
 
@@ -149,4 +149,4 @@ python tests/test_evidence_tools.py
 
 This work builds on Z.ai's model, OrcaRouter's derivatives, NVIDIA's checkpoint, Inco AI's draft, the vLLM project, and the local-inference-lab community's serving and benchmark tooling. Their claims are attributed separately from measurements made here.
 
-See [third-party notices](THIRD_PARTY_NOTICES.txt). Upstream code and corpus material retain their own licenses. **No new license grant for our original material or GitHub publication has been approved.**
+See [third-party notices](THIRD_PARTY_NOTICES.txt). Upstream code and corpus material retain their own licenses. **No new repository-wide license is granted for the original code, fixtures or report.**

@@ -1,0 +1,19 @@
+{
+  "schema": "glm53-orca-github-publication.v1",
+  "status": "approved_upload_pending",
+  "repository": "jcartu/glm53-orca-qualification",
+  "repository_url": "https://github.com/jcartu/glm53-orca-qualification",
+  "visibility": "public",
+  "new_license_granted": false,
+  "approval": {
+    "source": "explicit user response",
+    "visibility": "public",
+    "license_choice": "No new license"
+  },
+  "release_tag": "qualification-2026-09-19",
+  "manifest_sha256": "b5cdab0b8e9672d890eb0bb6891863318e4f04bcd09dc2b2dccbe5c4b755a6fc",
+  "expected_assets": 97,
+  "expected_asset_bytes": 27870237048,
+  "historical_local_verification": "results/publication-verification.json",
+  "note": "The historical local-verification receipt predates publication and is preserved unchanged. Existing third-party licenses remain in effect."
+}
