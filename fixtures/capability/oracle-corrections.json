@@ -1,0 +1,36 @@
+{
+  "schema": "orca-oracle-corrections.v1",
+  "frozen_before_orca_capability_results": true,
+  "dataset_sha256": "d1048fcd935bc3a6211d13221143ee0efed3356cba5ee19445b1169de43e0f8a",
+  "generation_changes": false,
+  "policy": "Preserve original scores and raw responses. Re-score every arm uniformly using the existing sandbox-recorded actual values; never regenerate/select responses.",
+  "corrections": {
+    "C09": {
+      "cases": [
+        {
+          "args": [
+            1
+          ],
+          "expected": 3
+        },
+        {
+          "args": [
+            5
+          ],
+          "expected": 10
+        },
+        {
+          "args": [
+            10
+          ],
+          "expected": 21
+        }
+      ],
+      "proof": "Positive integers divisible by3or5 begin3,5,6,9,10,12,15,18,20,21; f(5)=10 and f(10)=21. Existing keys9/18 are wrong.",
+      "audits": [
+        "code-oracle-audit.json",
+        "noncode-oracle-audit.json"
+      ]
+    }
+  }
+}

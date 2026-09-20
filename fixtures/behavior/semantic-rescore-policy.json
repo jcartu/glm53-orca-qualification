@@ -1,0 +1,10 @@
+{
+  "schema": "orca-existing-semantic-rescore-policy.v1",
+  "scorer": "harness/r29/rescore_behavior.py",
+  "historical_image": "sha256:913478ce92d0ad36472edabc8fb00e4775ea30a369555f3a9b939eb41236c0f3",
+  "future_image_policy": "Use the immutable corrected runtime image ID recorded by the fresh run; do not treat the historical local image ID as pullable.",
+  "model_responses_regenerated": false,
+  "json_selection": "The scorer requires all extracted JSON answers to agree; it never selects using the expected answer.",
+  "code_execution": "The same hidden-case scorer runs in bounded no-network/no-GPU runc containers. Module-level computed assignments are allowed for semantic diagnosis; strict scores remain preserved.",
+  "scope": "Report strict format success and semantic correctness separately for all arms; do not call strict-format losses intelligence losses."
+}

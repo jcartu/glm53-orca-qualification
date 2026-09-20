@@ -1,0 +1,201 @@
+{
+  "schema": "r29-history-fixtures/v1",
+  "cases": [
+    {
+      "id": "reasoning_history-16384-26090931",
+      "path": "reasoning_history-16384-26090931.json",
+      "sha256": "8cd97ae4260297b23410245350dcf059c11c1f379c1d380e48da5b55d4362691",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 16384,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 16750,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-16384-26090931",
+      "path": "visible_length_control-16384-26090931.json",
+      "sha256": "13ca176f53b83b72cb132c6bdaf1ff35f917e5c30d70c4256117a3485487977d",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 16384,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 16763,
+        "true": 16741
+      }
+    },
+    {
+      "id": "reasoning_history-131072-26090931",
+      "path": "reasoning_history-131072-26090931.json",
+      "sha256": "b743512d083f7f9ad87aed7a3233ed19738627251b60afb2e68eb7c96e78b0c2",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 131072,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 131437,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-131072-26090931",
+      "path": "visible_length_control-131072-26090931.json",
+      "sha256": "26aedce28cdc749c7cdfeb2eb13f0b2863d88c82bff9d31b6c6c0a148ad77e37",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 131072,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 131450,
+        "true": 131428
+      }
+    },
+    {
+      "id": "reasoning_history-524288-26090931",
+      "path": "reasoning_history-524288-26090931.json",
+      "sha256": "8d56aae36ca5a9ec66bea57ebd0a349c204860f9a004f870d61d477f39e68302",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 524288,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 524654,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-524288-26090931",
+      "path": "visible_length_control-524288-26090931.json",
+      "sha256": "11d683b48a908cae3fefc632b603b3cf585ce13af8dfde4b0e6d33bc4200aa0f",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 524288,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 524667,
+        "true": 524645
+      }
+    },
+    {
+      "id": "reasoning_history-819200-26090931",
+      "path": "reasoning_history-819200-26090931.json",
+      "sha256": "a787a556c769873a00923e7d9cc0ee9cec7101d40acba369f8cb037d3f8b0dd4",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 819200,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 819567,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-819200-26090931",
+      "path": "visible_length_control-819200-26090931.json",
+      "sha256": "1634ea0b055721de243dee7734fb934213cf1c37547b0f2c0a21056b3571db58",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 819200,
+      "seed": 26090931,
+      "offline_rendered_tokens": {
+        "false": 819581,
+        "true": 819559
+      }
+    },
+    {
+      "id": "reasoning_history-16384-26090932",
+      "path": "reasoning_history-16384-26090932.json",
+      "sha256": "a8c751bf9ccb8df81c3f2dfd81a731f35af718e25c36bc09271b51195467f108",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 16384,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 16751,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-16384-26090932",
+      "path": "visible_length_control-16384-26090932.json",
+      "sha256": "5d472452ba03c290cc6eb2b075fd2a23e7b60f4770045afc8d07446590fd9cbc",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 16384,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 16765,
+        "true": 16743
+      }
+    },
+    {
+      "id": "reasoning_history-131072-26090932",
+      "path": "reasoning_history-131072-26090932.json",
+      "sha256": "ed98eae8dae0aea6923dd76d94de34d0868bd7abf9c71d9239c4e9d0058d7bed",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 131072,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 131439,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-131072-26090932",
+      "path": "visible_length_control-131072-26090932.json",
+      "sha256": "87231b772ade0fde185dde240e56f318d54af5756c4cf3d625487452fc0680da",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 131072,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 131453,
+        "true": 131431
+      }
+    },
+    {
+      "id": "reasoning_history-524288-26090932",
+      "path": "reasoning_history-524288-26090932.json",
+      "sha256": "8a75c6c1fd4c514a57f74be9441799866bb170de292ed389a9947f781dceb7f1",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 524288,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 524655,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-524288-26090932",
+      "path": "visible_length_control-524288-26090932.json",
+      "sha256": "f0f1496cdbdbbcf33a77a908ba2508e3c7dd9891c5aa9ba1faa8ce0637b12b40",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 524288,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 524669,
+        "true": 524647
+      }
+    },
+    {
+      "id": "reasoning_history-819200-26090932",
+      "path": "reasoning_history-819200-26090932.json",
+      "sha256": "e270b6d814b004ad84ab30959443f83ba209244042c974562e6f940ed4f715d2",
+      "kind": "reasoning_history",
+      "nominal_filler_tokens": 819200,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 819567,
+        "true": 365
+      }
+    },
+    {
+      "id": "visible_length_control-819200-26090932",
+      "path": "visible_length_control-819200-26090932.json",
+      "sha256": "52851d974ac6e42d4188f9538615aa3342661f8853a1a3b7d982ca9e86a14d11",
+      "kind": "visible_length_control",
+      "nominal_filler_tokens": 819200,
+      "seed": 26090932,
+      "offline_rendered_tokens": {
+        "false": 819581,
+        "true": 819559
+      }
+    }
+  ],
+  "tokenizer_sha256": "19e773648cb4e65de8660ea6365e10acca112d42a854923df93db4a6f333a82d",
+  "template_sha256": "0c4099f3382d6c92700dfb99725025360966fd73032f0ecf32377c0d9e6309c5",
+  "requests_per_arm": 32,
+  "scope": "Fixed synthetic coding-tool histories, clear_thinking false/true. Visible-length controls retain similarly long input after reasoning is cleared. Role placement differs, so this is a diagnostic control, not a pure causal proof or the private reported reproducer."
+}

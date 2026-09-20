@@ -1,0 +1,26 @@
+{
+  "schema": "orca-history-fixture-inventory.v1",
+  "manifest": "manifest.json",
+  "manifest_sha256": "0f38d764fa540e6cd54cbdc4356aa0343d73d1159e45e320a25bdc1666353fad",
+  "source_in_restored_evidence": "publication-inputs/history",
+  "file_count": 16,
+  "total_bytes": 33449640,
+  "files": [
+    {"path": "reasoning_history-16384-26090931.json", "bytes": 95681, "sha256": "8cd97ae4260297b23410245350dcf059c11c1f379c1d380e48da5b55d4362691"},
+    {"path": "visible_length_control-16384-26090931.json", "bytes": 95747, "sha256": "13ca176f53b83b72cb132c6bdaf1ff35f917e5c30d70c4256117a3485487977d"},
+    {"path": "reasoning_history-131072-26090931.json", "bytes": 746496, "sha256": "b743512d083f7f9ad87aed7a3233ed19738627251b60afb2e68eb7c96e78b0c2"},
+    {"path": "visible_length_control-131072-26090931.json", "bytes": 746563, "sha256": "26aedce28cdc749c7cdfeb2eb13f0b2863d88c82bff9d31b6c6c0a148ad77e37"},
+    {"path": "reasoning_history-524288-26090931.json", "bytes": 2940883, "sha256": "8d56aae36ca5a9ec66bea57ebd0a349c204860f9a004f870d61d477f39e68302"},
+    {"path": "visible_length_control-524288-26090931.json", "bytes": 2940950, "sha256": "11d683b48a908cae3fefc632b603b3cf585ce13af8dfde4b0e6d33bc4200aa0f"},
+    {"path": "reasoning_history-819200-26090931.json", "bytes": 4577051, "sha256": "a787a556c769873a00923e7d9cc0ee9cec7101d40acba369f8cb037d3f8b0dd4"},
+    {"path": "visible_length_control-819200-26090931.json", "bytes": 4577118, "sha256": "1634ea0b055721de243dee7734fb934213cf1c37547b0f2c0a21056b3571db58"},
+    {"path": "reasoning_history-16384-26090932.json", "bytes": 96124, "sha256": "a8c751bf9ccb8df81c3f2dfd81a731f35af718e25c36bc09271b51195467f108"},
+    {"path": "visible_length_control-16384-26090932.json", "bytes": 96190, "sha256": "5d472452ba03c290cc6eb2b075fd2a23e7b60f4770045afc8d07446590fd9cbc"},
+    {"path": "reasoning_history-131072-26090932.json", "bytes": 747650, "sha256": "ed98eae8dae0aea6923dd76d94de34d0868bd7abf9c71d9239c4e9d0058d7bed"},
+    {"path": "visible_length_control-131072-26090932.json", "bytes": 747717, "sha256": "87231b772ade0fde185dde240e56f318d54af5756c4cf3d625487452fc0680da"},
+    {"path": "reasoning_history-524288-26090932.json", "bytes": 2941290, "sha256": "8a75c6c1fd4c514a57f74be9441799866bb170de292ed389a9947f781dceb7f1"},
+    {"path": "visible_length_control-524288-26090932.json", "bytes": 2941357, "sha256": "f0f1496cdbdbbcf33a77a908ba2508e3c7dd9891c5aa9ba1faa8ce0637b12b40"},
+    {"path": "reasoning_history-819200-26090932.json", "bytes": 4579378, "sha256": "e270b6d814b004ad84ab30959443f83ba209244042c974562e6f940ed4f715d2"},
+    {"path": "visible_length_control-819200-26090932.json", "bytes": 4579445, "sha256": "52851d974ac6e42d4188f9538615aa3342661f8853a1a3b7d982ca9e86a14d11"}
+  ]
+}

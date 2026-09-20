@@ -1,0 +1,149 @@
+{
+  "schema": "glm53-orca-publication-verification.v1",
+  "status": "verified_local_not_published",
+  "manifest_sha256": "b5cdab0b8e9672d890eb0bb6891863318e4f04bcd09dc2b2dccbe5c4b755a6fc",
+  "coverage": {
+    "discovered_files": 9732,
+    "discovered_source_bytes": 62069231779,
+    "excluded_files": 2441,
+    "excluded_source_bytes": 512803520,
+    "exported_bytes": 61555124575,
+    "exported_files": 7291,
+    "exported_source_bytes": 61556428259
+  },
+  "assets": 97,
+  "compressed_bytes": 27870237048,
+  "unpacked_bytes": 61555124575,
+  "largest_asset_bytes": 600131630,
+  "export": {
+    "exit_code": 0,
+    "elapsed_seconds": 703.79,
+    "reviewed_literal_list": "evidence/approved-canaries.json",
+    "warnings": "Three Python SyntaxWarnings for an invalid backslash-dot escape while inspecting source-text literals; no export error or omitted evidence resulted."
+  },
+  "full_restore": {
+    "selection": "all",
+    "complete": true,
+    "assets": 97,
+    "files": 7291,
+    "omitted_assets": 0,
+    "omitted_files": 0,
+    "elapsed_seconds": 155.37
+  },
+  "lightweight_restore": {
+    "selection": "text",
+    "complete": false,
+    "status": "text-only-subset",
+    "assets": 1,
+    "files": 7195,
+    "omitted_numeric_files": 96,
+    "elapsed_seconds": 15.36
+  },
+  "numeric_source_hashes_preserved": 96,
+  "diagnostic_artifacts_byte_identical": 20,
+  "empty_http_request_body_preserved": true,
+  "private_authorization_receipt_excluded": true,
+  "exclusions_by_category": {
+    "generated-cache": 2429,
+    "private-authorization-material": 1,
+    "vendor-runtime-binary": 11
+  },
+  "redaction_category_counts": {
+    "authorization_header": 3,
+    "cache_path": 107,
+    "credential_assignment": 28,
+    "gzip_metadata": 99,
+    "home_path": 670,
+    "lan_address": 254,
+    "model_path": 670,
+    "source_root_path": 6446,
+    "synthetic_canary_preserved": 90,
+    "url_credential": 10
+  },
+  "recomputed_results": [
+    {
+      "file": "collision-rates.svg",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "collision.csv",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "fidelity.json",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "long-context.json",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "model-quality.csv",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "model-quality.json",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "operations.json",
+      "byte_equal": false,
+      "value_equal": true
+    },
+    {
+      "file": "prefill.csv",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "prefill.json",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "speculation.json",
+      "byte_equal": false,
+      "value_equal": true
+    },
+    {
+      "file": "throughput.csv",
+      "byte_equal": true,
+      "value_equal": true
+    },
+    {
+      "file": "throughput.json",
+      "byte_equal": true,
+      "value_equal": true
+    }
+  ],
+  "recomputed_source_hash_note": "table-sources.json correctly records the sanitized input hashes when re-run on restored evidence. Operations/speculation JSON key order differs, but every value is identical.",
+  "original_result_source_citations_verified": 66,
+  "packaged_source_hashes_verified": 48,
+  "offline_regressions": {
+    "passed": 23,
+    "failed": 0,
+    "seconds_reported": 3.457
+  },
+  "production": {
+    "original_container_id": "0f81f0e6c6bce68eef02197f2aa779797697c92bb8ea24d14cd5cea2a5850317",
+    "restored_healthy": true,
+    "useful_inference_check_passed": true,
+    "candidate_promoted": false,
+    "receipts": [
+      "operations-01/production-restored.json",
+      "operations-01/production-restored-inference.json"
+    ]
+  },
+  "publication": {
+    "github_repository_created": false,
+    "uploaded_assets": 0,
+    "new_license_granted": false,
+    "reason": "Explicit publication and licensing approval remains outstanding; timed-out defaults were not consent."
+  }
+}

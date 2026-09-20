@@ -1,0 +1,7 @@
+profile,name,capability_passed,capability_total,supplementary_passed,supplementary_total,behavior_status,behavior_strict_passed,behavior_semantic_passed,behavior_total,api_checks_passed,api_checks_total,vision_passed,vision_total
+original-fp8,Original GLM FP8,60,60,6,6,measured,47,51,52,10,12,9,12
+orca-fp8,Orca abliterated FP8,57,60,6,6,measured,43,51,52,9,12,8,12
+control,"NVIDIA NVFP4, matched profile",58,60,6,6,measured,43,51,52,10,12,11,12
+candidate,"Orca NVFP4, no speculation",55,60,6,6,measured,49,51,52,9,12,12,12
+candidate-mtp3,"Orca NVFP4, MTP-3",56,60,6,6,not part of speculative-arm protocol,,,,9,12,11,12
+candidate-dflash2,"Orca NVFP4, DFlash2-7",55,60,6,6,not part of speculative-arm protocol,,,,9,12,12,12

@@ -1,0 +1,36 @@
+{
+  "history": {
+    "completed": 32,
+    "semantic_passed": 32,
+    "runtime_errors": 0,
+    "budget_exhausted": 0
+  },
+  "retrieval": {
+    "completed": 15,
+    "passed": 15,
+    "runtime_errors": 0,
+    "actual_prompt_tokens_by_nominal_target": {
+      "131072": [
+        130847,
+        130888,
+        130842,
+        130841,
+        130866
+      ],
+      "524288": [
+        523961,
+        523999,
+        523949,
+        523957,
+        523977
+      ],
+      "1000000": [
+        999691,
+        999665,
+        999652,
+        999669,
+        999682
+      ]
+    }
+  }
+}

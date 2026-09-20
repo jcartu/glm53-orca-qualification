@@ -1,0 +1,102 @@
+{
+  "schema": "orca-serving-diagnosis-requests.v1",
+  "source": "Historical gauntlet-01 control A01-A08 request payloads; responses remain in evidence.",
+  "requests": [
+    {
+      "id": "A01",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "Compute 7^13 mod 1000003."}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A02",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "Compute 2^40 + 3^25."}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A03",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "How many primes are there below 1500?"}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A04",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "What is the greatest common divisor of 1071 and 462?"}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A05",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "What is the sum of all primes below 200?"}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A06",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "Compute 19! / 18! + 17 * 3."}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A07",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "What is the 500th prime?"}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    },
+    {
+      "id": "A08",
+      "request": {
+        "model": "GLM-5.3-Flash-NVFP4",
+        "messages": [{"role": "user", "content": "How many perfect squares are there between 1 and 10000 inclusive?"}],
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "seed": 260919,
+        "max_tokens": 4096,
+        "reasoning_effort": "low"
+      }
+    }
+  ]
+}

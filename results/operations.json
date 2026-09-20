@@ -1,0 +1,276 @@
+{
+  "schema": "glm53-orca-operational-results.v1",
+  "collision": {
+    "completed_cells": 12,
+    "summary": [
+      {
+        "policy": "compute_share_0.4",
+        "concurrency": 1,
+        "runs": 2,
+        "total_useful_tokens_per_second": 4606.055221680033,
+        "decode_tokens_delivered": 655.0,
+        "baseline_decode_tokens_per_second": 16.162075560916144,
+        "collision_decode_tokens_per_second": 10.887454211126226,
+        "decode_retention_percent": 67.3678453041719,
+        "prefill_tokens_per_second": 4595.167767468907,
+        "prefill_tokens_completed": 276022.5,
+        "prefill_request_completion_percent": 100.0,
+        "end_waiting_requests": 0.0,
+        "decode_gap_p95_ms": 367.7064462273847,
+        "decode_gap_p99_ms": 420.85657005372923,
+        "prefill_ttft_p95_seconds": 57.06406954916892,
+        "decode_jain_fairness": 1.0
+      },
+      {
+        "policy": "off",
+        "concurrency": 1,
+        "runs": 2,
+        "total_useful_tokens_per_second": 7928.221545473036,
+        "decode_tokens_delivered": 71.5,
+        "baseline_decode_tokens_per_second": 16.495654289433965,
+        "collision_decode_tokens_per_second": 2.0588534153245206,
+        "decode_retention_percent": 12.484045230425167,
+        "prefill_tokens_per_second": 7926.162692057712,
+        "prefill_tokens_completed": 276022.5,
+        "prefill_request_completion_percent": 100.0,
+        "end_waiting_requests": 0.0,
+        "decode_gap_p95_ms": 592.8670180757761,
+        "decode_gap_p99_ms": 1077.3397808332809,
+        "prefill_ttft_p95_seconds": 32.431400358524115,
+        "decode_jain_fairness": 1.0
+      },
+      {
+        "policy": "compute_share_0.4",
+        "concurrency": 4,
+        "runs": 2,
+        "total_useful_tokens_per_second": 4634.116804012447,
+        "decode_tokens_delivered": 2550.5,
+        "baseline_decode_tokens_per_second": 63.6559054677374,
+        "collision_decode_tokens_per_second": 42.45388076373648,
+        "decode_retention_percent": 66.69700305333694,
+        "prefill_tokens_per_second": 4591.66292324871,
+        "prefill_tokens_completed": 276022.5,
+        "prefill_request_completion_percent": 100.0,
+        "end_waiting_requests": 0.0,
+        "decode_gap_p95_ms": 366.7695067313616,
+        "decode_gap_p99_ms": 421.8050008246791,
+        "prefill_ttft_p95_seconds": 57.1109652679399,
+        "decode_jain_fairness": 0.9999996627609893
+      },
+      {
+        "policy": "off",
+        "concurrency": 4,
+        "runs": 2,
+        "total_useful_tokens_per_second": 7908.732529684425,
+        "decode_tokens_delivered": 290.5,
+        "baseline_decode_tokens_per_second": 63.150964709455266,
+        "collision_decode_tokens_per_second": 8.323790336472928,
+        "decode_retention_percent": 13.183743315323195,
+        "prefill_tokens_per_second": 7900.408739347953,
+        "prefill_tokens_completed": 276022.5,
+        "prefill_request_completion_percent": 100.0,
+        "end_waiting_requests": 0.0,
+        "decode_gap_p95_ms": 1026.658737582329,
+        "decode_gap_p99_ms": 1120.2459911824553,
+        "prefill_ttft_p95_seconds": 32.55531452388823,
+        "decode_jain_fairness": 0.9999741753322775
+      },
+      {
+        "policy": "compute_share_0.4",
+        "concurrency": 8,
+        "runs": 2,
+        "total_useful_tokens_per_second": 4676.07607193327,
+        "decode_tokens_delivered": 5128.5,
+        "baseline_decode_tokens_per_second": 124.96571105614129,
+        "collision_decode_tokens_per_second": 85.2038422586664,
+        "decode_retention_percent": 68.18177039791414,
+        "prefill_tokens_per_second": 4590.872229674604,
+        "prefill_tokens_completed": 276022.5,
+        "prefill_request_completion_percent": 100.0,
+        "end_waiting_requests": 0.0,
+        "decode_gap_p95_ms": 370.0169808536884,
+        "decode_gap_p99_ms": 427.42201853514416,
+        "prefill_ttft_p95_seconds": 57.10974020647264,
+        "decode_jain_fairness": 0.9999998009243479
+      },
+      {
+        "policy": "off",
+        "concurrency": 8,
+        "runs": 2,
+        "total_useful_tokens_per_second": 7886.991299576501,
+        "decode_tokens_delivered": 572.5,
+        "baseline_decode_tokens_per_second": 126.48272850453644,
+        "collision_decode_tokens_per_second": 16.373140932140807,
+        "decode_retention_percent": 12.949076247241862,
+        "prefill_tokens_per_second": 7870.61815864436,
+        "prefill_tokens_completed": 276022.5,
+        "prefill_request_completion_percent": 100.0,
+        "end_waiting_requests": 0.0,
+        "decode_gap_p95_ms": 1038.3967095986009,
+        "decode_gap_p99_ms": 1115.3940290614264,
+        "prefill_ttft_p95_seconds": 32.68263082371122,
+        "decode_jain_fairness": 0.9999502990699443
+      }
+    ],
+    "window": "Completion-bounded, not fixed duration. Compare rates and latency, not unequal-window token totals."
+  },
+  "cache_lifecycle": {
+    "complete": true,
+    "passed": false,
+    "gate_summary": {
+      "fail": 0,
+      "not_applicable": 1,
+      "pass": 35,
+      "unavailable": 3
+    },
+    "unavailable_gates": [
+      {
+        "name": "cancellation.server_abort_observed",
+        "required": true,
+        "status": "unavailable"
+      },
+      {
+        "name": "cancellation.live_retrieve_observed_under_pressure",
+        "required": false,
+        "status": "unavailable"
+      },
+      {
+        "name": "evidence.all_rank_payload_byte_equality",
+        "required": false,
+        "status": "unavailable"
+      }
+    ]
+  },
+  "cache_mixed_restore": {
+    "complete": true,
+    "passed": true,
+    "requests": 29,
+    "passed_requests": 29,
+    "runtime_errors": 0
+  },
+  "soak": {
+    "schema": "orcarouter-workload-soak-summary/v1",
+    "status": "fail",
+    "label": "candidate-soak",
+    "model": "GLM-5.3-Flash-NVFP4",
+    "started_at": "2026-09-19T22:13:02.370355+00:00",
+    "finished_at": "2026-09-19T23:13:02.403300+00:00",
+    "requested_duration_seconds": 3600.0,
+    "actual_timed_phase_seconds": 3600.032940783014,
+    "phase_summaries": [
+      {
+        "concurrency": 1,
+        "started_at": "2026-09-19T22:13:02.370370+00:00",
+        "started_offset_seconds": 1.6550184227526188e-06,
+        "elapsed_seconds": 1200.0123837590218,
+        "records": 286,
+        "completed_attempts": 285,
+        "runtime_errors": 0,
+        "failed_attempts": 17,
+        "unsupported": 0
+      },
+      {
+        "concurrency": 4,
+        "started_at": "2026-09-19T22:33:02.382835+00:00",
+        "started_offset_seconds": 1200.0124662640155,
+        "elapsed_seconds": 1200.0029478099896,
+        "records": 485,
+        "completed_attempts": 481,
+        "runtime_errors": 7,
+        "failed_attempts": 26,
+        "unsupported": 0
+      },
+      {
+        "concurrency": 8,
+        "started_at": "2026-09-19T22:53:02.385939+00:00",
+        "started_offset_seconds": 2400.015570921998,
+        "elapsed_seconds": 1200.0156028420315,
+        "records": 518,
+        "completed_attempts": 510,
+        "runtime_errors": 12,
+        "failed_attempts": 31,
+        "unsupported": 0
+      }
+    ],
+    "records": 1289,
+    "kind_counts": {
+      "canary": 233,
+      "reasoning": 235,
+      "history": 471,
+      "prefill": 229,
+      "cancel_recovery": 116,
+      "prefill_128k": 3,
+      "prefill_32k": 2
+    },
+    "completed_by_concurrency": {
+      "1": 285,
+      "4": 481,
+      "8": 510
+    },
+    "required_concurrency_covered": true,
+    "runtime_errors": 19,
+    "runtime_stability_passed": false,
+    "model_checks_passed": false,
+    "unsupported_context_attempts": 0,
+    "unobservable_usage_attempts": 19,
+    "planned_phase_boundary_cancellations": 13,
+    "cancellation_recovery_attempts": 116,
+    "workload_coverage": {
+      "canary": 233,
+      "reasoning": 232,
+      "history": 466,
+      "prefill": 229,
+      "cancel_recovery": 116
+    },
+    "prefill_coverage": {
+      "32k": 116,
+      "128k": 113
+    },
+    "history_multiturn_completed": true,
+    "required_workloads_covered": true,
+    "degeneration_heuristic_candidates": [],
+    "latency_seconds": {
+      "available": 1276,
+      "unavailable": 13,
+      "min": 0.31509444199036807,
+      "max": 81.89343851601006,
+      "mean": 12.091269209444324
+    },
+    "prompt_tokens": {
+      "available": 1257,
+      "unavailable": 32,
+      "min": 29.0,
+      "max": 131139.0,
+      "mean": 14886.86077963405
+    },
+    "completion_tokens": {
+      "available": 1257,
+      "unavailable": 32,
+      "min": 9.0,
+      "max": 757.0,
+      "mean": 101.11217183770883
+    },
+    "context_limit": 1048576,
+    "context_limit_candidates": [
+      1048576
+    ],
+    "context_observability": "observed",
+    "passed": false,
+    "scope": "Bounded mixed benign traffic at concurrency 1/4/8 with deterministic canaries, growing histories, nominal 32K/128K cold prefills, reasoning tasks, deliberate cancellation followed by a useful-response check, and diagnostic-only repetition heuristics. Actual server prompt-token accounting is authoritative; unavailable values remain null.",
+    "failed_checks_including_runtime_errors": 74,
+    "non_runtime_model_failures": 55,
+    "model_failures_by_fixture": {
+      "reverse": 53,
+      "recurrence": 2
+    },
+    "runtime_errors_by_fixture": {
+      "multiply": 19
+    },
+    "runtime_http_status_counts": {
+      "500": 19
+    },
+    "passed_attempts": 1202,
+    "counting_note": "Records are logical workload attempts, not HTTP requests. The raw deterministic_failures field includes runtime failures; the separate model-failure count excludes them.",
+    "causality_limit": "No matched NVIDIA one-hour soak was run. The observed MTP-3/XGrammar HTTP 500s are not attributed specifically to quantization or abliteration."
+  }
+}

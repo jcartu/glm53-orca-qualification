@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "GLM-5.3 Orca qualification evidence index",
+  "description": "Contract for a manifest generated only after a real, complete evidence export. Release asset URLs are deliberately not part of the index.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "source_root_label",
+    "coverage",
+    "files",
+    "assets",
+    "exclusions",
+    "redaction_ledger"
+  ],
+  "properties": {
+    "schema": {
+      "const": "glm53-orca-evidence.v1"
+    },
+    "source_root_label": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^/\\\\\\u0000-\\u001f]+$"
+    },
+    "coverage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "discovered_files",
+        "exported_files",
+        "excluded_files",
+        "discovered_source_bytes",
+        "exported_source_bytes",
+        "excluded_source_bytes",
+        "exported_bytes"
+      ],
+      "properties": {
+        "discovered_files": { "$ref": "#/$defs/nonnegativeInteger" },
+        "exported_files": { "$ref": "#/$defs/nonnegativeInteger" },
+        "excluded_files": { "$ref": "#/$defs/nonnegativeInteger" },
+        "discovered_source_bytes": { "$ref": "#/$defs/nonnegativeInteger" },
+        "exported_source_bytes": { "$ref": "#/$defs/nonnegativeInteger" },
+        "excluded_source_bytes": { "$ref": "#/$defs/nonnegativeInteger" },
+        "exported_bytes": { "$ref": "#/$defs/nonnegativeInteger" }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/file" }
+    },
+    "assets": {
+      "type": "array",
+      "maxItems": 1000,
+      "items": { "$ref": "#/$defs/asset" }
+    },
+    "exclusions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/exclusion" }
+    },
+    "redaction_ledger": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["category_counts", "files"],
+      "properties": {
+        "category_counts": { "$ref": "#/$defs/categoryCounts" },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["logical_path", "category_counts"],
+            "properties": {
+              "logical_path": { "$ref": "#/$defs/safePath" },
+              "category_counts": { "$ref": "#/$defs/categoryCounts" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "nonnegativeInteger": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "positiveInteger": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "safePath": {
+      "type": "string",
+      "minLength": 1,
+      "allOf": [
+        {
+          "pattern": "^[^/\\\\:\\u0000-\\u001f\\u007f]+(?:/[^/\\\\:\\u0000-\\u001f\\u007f]+)*$"
+        },
+        { "not": { "pattern": "(^|/)\\.\\.?(/|$)" } },
+        { "not": { "pattern": "(^|/)[^/]*[ .](/|$)" } },
+        {
+          "not": {
+            "pattern": "(^|/)(?:[Cc][Oo][Nn]|[Pp][Rr][Nn]|[Aa][Uu][Xx]|[Nn][Uu][Ll]|[Cc][Oo][Nn][Ii][Nn]\\$|[Cc][Oo][Nn][Oo][Uu][Tt]\\$|[Cc][Oo][Mm][1-9\\u00b9\\u00b2\\u00b3]|[Ll][Pp][Tt][1-9\\u00b9\\u00b2\\u00b3])[ ]*(?:\\.|/|$)"
+          }
+        }
+      ]
+    },
+    "assetName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 255,
+      "pattern": "^[A-Za-z0-9._-]+$",
+      "allOf": [
+        { "not": { "pattern": "[.]$" } },
+        {
+          "not": {
+            "pattern": "^(?:[Cc][Oo][Nn]|[Pp][Rr][Nn]|[Aa][Uu][Xx]|[Nn][Uu][Ll]|[Cc][Oo][Nn][Ii][Nn]\\$|[Cc][Oo][Nn][Oo][Uu][Tt]\\$|[Cc][Oo][Mm][1-9]|[Ll][Pp][Tt][1-9])(?:\\.|$)"
+          }
+        }
+      ]
+    },
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "logical_path",
+        "source_bytes",
+        "exported_bytes",
+        "exported_sha256",
+        "source_sha256",
+        "asset",
+        "redaction_classification"
+      ],
+      "properties": {
+        "logical_path": { "$ref": "#/$defs/safePath" },
+        "source_bytes": { "$ref": "#/$defs/nonnegativeInteger" },
+        "exported_bytes": { "$ref": "#/$defs/nonnegativeInteger" },
+        "exported_sha256": { "$ref": "#/$defs/sha256" },
+        "source_sha256": { "$ref": "#/$defs/sha256" },
+        "asset": { "$ref": "#/$defs/assetName" },
+        "redaction_classification": {
+          "enum": [
+            "none",
+            "sanitized-machine-identifiers",
+            "redacted-credentials",
+            "sanitized-and-redacted"
+          ]
+        }
+      }
+    },
+    "asset": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "size",
+        "sha256",
+        "format",
+        "logical_extraction_root",
+        "file_count",
+        "unpacked_bytes"
+      ],
+      "properties": {
+        "name": { "$ref": "#/$defs/assetName" },
+        "size": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 2147483647
+        },
+        "sha256": { "$ref": "#/$defs/sha256" },
+        "format": {
+          "enum": ["tar+zstd", "npy+zstd"]
+        },
+        "logical_extraction_root": {
+          "const": "."
+        },
+        "file_count": { "$ref": "#/$defs/positiveInteger" },
+        "unpacked_bytes": { "$ref": "#/$defs/nonnegativeInteger" }
+      }
+    },
+    "exclusion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["logical_path", "source_bytes", "category", "reason"],
+      "properties": {
+        "logical_path": { "$ref": "#/$defs/safePath" },
+        "source_bytes": { "$ref": "#/$defs/nonnegativeInteger" },
+        "category": {
+          "enum": [
+            "generated-cache",
+            "model-weight",
+            "private-authorization-material",
+            "vendor-runtime-binary"
+          ]
+        },
+        "reason": {
+          "enum": [
+            "Generated cache or bytecode; reproducible from the exported source.",
+            "Model weight; weights are distributed separately and are not evidence artifacts.",
+            "Private authorization material is never published.",
+            "Compiled vendor runtime binary obtainable from the pinned runtime image."
+          ]
+        }
+      },
+      "oneOf": [
+        {
+          "properties": {
+            "category": { "const": "generated-cache" },
+            "reason": { "const": "Generated cache or bytecode; reproducible from the exported source." }
+          }
+        },
+        {
+          "properties": {
+            "category": { "const": "model-weight" },
+            "reason": { "const": "Model weight; weights are distributed separately and are not evidence artifacts." }
+          }
+        },
+        {
+          "properties": {
+            "category": { "const": "private-authorization-material" },
+            "reason": { "const": "Private authorization material is never published." }
+          }
+        },
+        {
+          "properties": {
+            "category": { "const": "vendor-runtime-binary" },
+            "reason": { "const": "Compiled vendor runtime binary obtainable from the pinned runtime image." }
+          }
+        }
+      ]
+    },
+    "categoryCounts": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "authorization_header": { "$ref": "#/$defs/positiveInteger" },
+        "cache_path": { "$ref": "#/$defs/positiveInteger" },
+        "credential_assignment": { "$ref": "#/$defs/positiveInteger" },
+        "credential_field": { "$ref": "#/$defs/positiveInteger" },
+        "gzip_metadata": { "$ref": "#/$defs/positiveInteger" },
+        "home_path": { "$ref": "#/$defs/positiveInteger" },
+        "lan_address": { "$ref": "#/$defs/positiveInteger" },
+        "model_path": { "$ref": "#/$defs/positiveInteger" },
+        "private_key_block": { "$ref": "#/$defs/positiveInteger" },
+        "source_root_path": { "$ref": "#/$defs/positiveInteger" },
+        "synthetic_canary_preserved": { "$ref": "#/$defs/positiveInteger" },
+        "url_credential": { "$ref": "#/$defs/positiveInteger" }
+      }
+    }
+  }
+}

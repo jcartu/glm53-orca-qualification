@@ -1,0 +1,44 @@
+{
+  "schema": "orca-fidelity-brief.v1",
+  "rows": [
+    {
+      "comparison": "original_fp8-to-orca_fp8",
+      "capture_validation": "pass",
+      "positions": 24564,
+      "kl_mean": 0.029924379381444984,
+      "kl_p95": 0.12391655594021958,
+      "kl_p99": 0.4116614992097524,
+      "top1_agreement": 0.9482169027845627,
+      "reference_ppl": 2.767507115114556,
+      "candidate_ppl": 2.7833741120706694,
+      "ppl_ratio": 1.0057333174933702
+    },
+    {
+      "comparison": "orca_fp8-to-candidate",
+      "capture_validation": "pass",
+      "positions": 24564,
+      "kl_mean": 0.07921485938903595,
+      "kl_p95": 0.3557206579411672,
+      "kl_p99": 1.0404579566579644,
+      "top1_agreement": 0.9159745969711773,
+      "reference_ppl": 2.7833741120706694,
+      "candidate_ppl": 2.874809012430788,
+      "ppl_ratio": 1.0328503811124752
+    },
+    {
+      "comparison": "original_fp8-to-candidate",
+      "capture_validation": "pass",
+      "positions": 24564,
+      "kl_mean": 0.08138447891991567,
+      "kl_p95": 0.375482835400826,
+      "kl_p99": 1.044824964137137,
+      "top1_agreement": 0.9131656082071324,
+      "reference_ppl": 2.767507115114556,
+      "candidate_ppl": 2.874809012430788,
+      "ppl_ratio": 1.0387720402705416
+    }
+  ],
+  "source": "fidelity-02",
+  "production_restored_inference": true,
+  "interpretation": "Validity passed, not a universal quality threshold. KL is directional reference || candidate; nats/token. Same fixed 24564 primary positions, full154880 vocabulary. Marlin W4A16 corrected runtime, FP8 KV; not an exact publisher replication."
+}

@@ -1,0 +1,51 @@
+THIRD-PARTY SOURCE AND LICENSE EVIDENCE
+
+This file is evidence and attribution only. It does not grant a license for this repository as a whole, and it does not invent a copyright holder or license text that was absent from the source checkout.
+
+llm-inference-bench
+-------------------
+Bundled files:
+  harness/bench/llm_decode_bench.py
+  harness/bench/README.md
+  harness/bench/CHANGELOG.md
+
+Upstream repository: https://github.com/local-inference-lab/llm-inference-bench.git
+Pinned source commit: 1438ed34702fff8492f7b68736d9e1ad4f3d8c56
+llm_decode_bench.py SHA-256: 39fa85c5971f2d35ca92c53eea7bc92db11b7691d5fadae84a78e034f6d7a625
+README.md SHA-256: c1bdd3a93a5039e099f46b383f2e32f36b4e94d19bd8fff4651bfae940454bf7
+CHANGELOG.md SHA-256: 781306c862a8d7a6c731bf2745972a07aaf614f4deace5f7ea37a6d3b795799d
+
+License evidence in the pinned local checkout: README.md ends with the heading "## License" followed by "MIT". The checkout contained no standalone LICENSE or COPYING file. The upstream README and changelog are preserved byte-for-byte beside the bundled script so the declaration and methodology history remain inspectable. No fuller MIT notice or copyright attribution is fabricated here.
+
+Python packages listed in requirements.txt are dependencies, not vendored source. Their package metadata on the packaging workstation reported: httpx BSD-3-Clause; NumPy BSD-3-Clause and bundled-component licenses; Pillow MIT-CMU; psutil BSD-3-Clause; requests Apache-2.0; rich MIT; transformers Apache-2.0; huggingface-hub Apache; pyarrow Apache-2.0. tokenizers 0.22.2 declares an Apache Software License classifier. Users should consult each installed distribution for authoritative notices.
+
+vLLM runtime modifications
+--------------------------
+The modified compressed-tensors NVFP4 loader and FP8 configuration source in campaign/runtime-repair retain their upstream SPDX Apache-2.0 and vLLM contributor copyright notices. The standard Apache-2.0 license text is included at LICENSES/Apache-2.0.txt. The modifications preserve separate gate/up expert scales for this GLM Marlin W4A16 path, reject unsupported activation-scale paths, and correct HF FP8 exclusion namespace matching. They are described and tested in docs/findings.md; this is not a general-purpose runtime qualification.
+
+Upstream source: https://github.com/vllm-project/vllm
+As-run base runtime: localinferencelab/vllm@sha256:f41ca8bb10bb3a125a50340d70d39ad4b7f5605f3fcb661bc992ed0bc4701a00
+
+WikiText input material
+-----------------------
+The primary fidelity corpus is Salesforce/wikitext, wikitext-2-raw-v1 test split, revision b08601e04326c79dfdd32d625aee71d232d685c3. The upstream dataset card lists CC BY-SA 3.0 and GFDL. Corpus-derived text/token inputs retain upstream attribution and licensing; no repository-wide license grant overrides those rights.
+
+Dataset card: https://huggingface.co/datasets/Salesforce/wikitext/blob/b08601e04326c79dfdd32d625aee71d232d685c3/README.md
+Dataset authors: Stephen Merity, Caiming Xiong, James Bradbury, Richard Socher.
+Paper: Pointer Sentinel Mixture Models, https://arxiv.org/abs/1609.07843
+Wikipedia is the original article source.
+
+Checkpoints are external dependencies, not redistributed weights
+----------------------------------------------------------------
+The GLM original, NVIDIA and Orca checkpoint identities are recorded in the methods and evidence. Obtain weights from their publishers and comply with their terms and any access gates.
+
+The tested MXFP8 DFlash2 draft is available as local-inference-lab/GLM-5.3-Flash-DFlash2 at revision 713226ab03bc38afdf955c7450436c2f7176f6f8. Its weight SHA-256 and all five small metadata/configuration files match the local artifact used in this study. The older repository URL ending in -MXFP8 is unavailable.
+
+Draft publisher: https://huggingface.co/local-inference-lab/GLM-5.3-Flash-DFlash2
+Draft source: incoai/GLM-5.3-Flash-DFlash2, revision dc77ff1c99eeb2df044ee3d4f0094eb033fee410.
+The draft model card declares CC BY-NC-ND 4.0, not MIT. Attribution: Inco AI, DFlash 2: Keep Drafting Parallel (2026), https://inco.ai/blog/dflash2/ .
+This repository includes provenance and test results, not those model weights, and does not grant rights to redistribute or commercially use them.
+
+Original material
+------------------
+No new license for the original code, fixtures or report has been approved. Publication and licensing approval remain separate from these third-party notices.

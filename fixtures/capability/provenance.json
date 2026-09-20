@@ -1,0 +1,35 @@
+{
+  "schema": "orca-public-capability-fixture-provenance.v1",
+  "historical_as_run": {
+    "path_in_evidence": "campaign source snapshots and capability input-contract/raw records",
+    "sha256": "d1048fcd935bc3a6211d13221143ee0efed3356cba5ee19445b1169de43e0f8a",
+    "preserved_unchanged": true
+  },
+  "future_run_fixture": {
+    "path": "fixtures/capability/tasks.json",
+    "sha256": "d6ac27099c621d9c82e95a125bf595e7fdf27f181ebe0088a6dccbbdd1becf10"
+  },
+  "changes_for_future_runs": [
+    {
+      "task": "C05",
+      "field": "verifier.tests[2].args[0]",
+      "historical": 3221225472,
+      "effective_and_public": 2147483646,
+      "reason": "The prompt requires n < 2^31. The effective campaign verifier substituted the in-domain value 2147483646 with the same false oracle before executing generated code."
+    },
+    {
+      "task": "C09",
+      "field": "verifier.tests expected values",
+      "historical": [3, 9, 18],
+      "effective_and_public": [3, 10, 21],
+      "reason": "Positive integers divisible by 3 or 5 begin 3,5,6,9,10,12,15,18,20,21. The uniform post-run oracle correction is retained in fixtures/capability/oracle-corrections.json.",
+      "oracle_corrections_sha256": "ea9e432828fe8d01023cb03b2ff1425d7250fed485572787529e2ce94082dded"
+    }
+  ],
+  "c01": {
+    "fixture_verifier": "builtin",
+    "effective_oracle": "campaign/workload_probe.py computes f(10**18) exactly with independent fast doubling modulo 998244353 and asserts that value; the historical non-assertion is not used."
+  },
+  "generation_changed": false,
+  "historical_responses_regenerated": false
+}

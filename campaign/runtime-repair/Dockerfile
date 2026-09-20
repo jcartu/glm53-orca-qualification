@@ -1,0 +1,3 @@
+FROM localinferencelab/vllm@sha256:f41ca8bb10bb3a125a50340d70d39ad4b7f5605f3fcb661bc992ed0bc4701a00
+COPY compressed_tensors_moe_w4a4_nvfp4.py /opt/glm53-flash/vllm/vllm/model_executor/layers/quantization/compressed_tensors/compressed_tensors_moe/compressed_tensors_moe_w4a4_nvfp4.py
+LABEL qualification.scope="Orca NVFP4 Marlin per-projection scale correctness; no checkpoint changes"

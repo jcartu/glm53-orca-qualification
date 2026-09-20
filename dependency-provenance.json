@@ -1,0 +1,83 @@
+{
+  "schema": "orca-qualification-dependency-provenance.v1",
+  "python": {
+    "minimum": "3.12",
+    "pins_file": "requirements.txt",
+    "pin_basis": "Versions installed on the packaging workstation when this portable harness was assembled; runtime captures independently record the Python, torch, CUDA, and vLLM identities used for fidelity work.",
+    "packages": {
+      "huggingface-hub": "1.4.1",
+      "httpx": "0.28.1",
+      "numpy": "2.4.3",
+      "Pillow": "12.1.1",
+      "psutil": "7.2.2",
+      "pyarrow": "23.0.1",
+      "requests": "2.33.1",
+      "rich": "15.0.0",
+      "tokenizers": "0.22.2",
+      "transformers": "5.1.0"
+    }
+  },
+  "system_commands": [
+    "bash",
+    "docker",
+    "hf",
+    "nvidia-smi",
+    "zstd"
+  ],
+  "runtime_image": {
+    "build_context": "campaign/runtime-repair",
+    "dockerfile": "campaign/runtime-repair/Dockerfile.fp8-exclusions",
+    "pinned_base": "localinferencelab/vllm@sha256:f41ca8bb10bb3a125a50340d70d39ad4b7f5605f3fcb661bc992ed0bc4701a00",
+    "required_default_local_tag": "glm53-orca-qualification-runtime:local",
+    "override": "BATTERY_IMAGE",
+    "policy": "The selected corrected image must already exist locally. The harness resolves it to an immutable image ID before launch and records both the requested reference and resolved ID. It never falls back to the unpatched base image.",
+    "container_provided": [
+      "torch",
+      "vllm",
+      "LMCache",
+      "jq"
+    ],
+    "base_image_required_paths": [
+      "/usr/local/bin/serve-glm53-flash-nvfp4-dflash2.sh",
+      "/usr/local/libexec/serve-glm53-flash-lmcache-cache-complete.sh",
+      "/usr/local/libexec/serve-glm53-flash-nvfp4-dflash2.sh",
+      "/usr/local/libexec/glm53_checkpoint_identity.py",
+      "/opt/venv/bin/python",
+      "/opt/venv/bin/vllm",
+      "/opt/venv/bin/lmcache"
+    ]
+  },
+  "runtime_prerequisites": [
+    "Linux with Docker and the NVIDIA container runtime.",
+    "Exactly four healthy qualification GPUs visible as indices 0,1,2,3; the coordinator fails closed on recovery faults or foreign GPU work in strict mode.",
+    "An existing running production container named glm53-prod serving loopback port 5001; it must be idle before pause and the same container ID is restored and inference-checked afterward.",
+    "At least 128 GiB container shared memory for serving phases and sufficient local storage for checkpoints, cache namespaces, run evidence, and fidelity arrays.",
+    "The corrected runtime image built from campaign/runtime-repair/Dockerfile.fp8-exclusions, tagged glm53-orca-qualification-runtime:local or selected explicitly with BATTERY_IMAGE."
+  ],
+  "staged_model_directories_under_ORCA_MODEL_ROOT": [
+    "GLM-5.3-Flash-NVFP4-nvidia-09b04e5e",
+    "Orca-GLM-5.3-Flash-Uncensored-NVFP4-ec0adf4f",
+    "Orca-GLM-5.3-Flash-Uncensored-FP8-3cec42d6",
+    "GLM-5.3-Flash-Original-FP8-eb9eb208",
+    "GLM-5.3-Flash-DFlash2-MXFP8"
+  ],
+  "configuration_roots": {
+    "ORCA_STATE_DIR": "Fresh run state and validation receipts; default .local under the repository.",
+    "ORCA_MODEL_ROOT": "Staged checkpoint directories; default .local/models under the repository.",
+    "ORCA_CACHE_ROOT": "Cache parent containing qualification/ and production/ safety namespaces; default .local/cache under the repository."
+  },
+  "external_cli_versions": {
+    "hf": "1.22.0",
+    "zstd": "1.5.7",
+    "note": "The hf CLI used for checksum verification is installed separately from the host huggingface-hub Python1.4.1 package; use the tested CLI version rather than assuming the Python pin provides it."
+  },
+  "draft_checkpoint": {
+    "repo": "local-inference-lab/GLM-5.3-Flash-DFlash2",
+    "revision": "713226ab03bc38afdf955c7450436c2f7176f6f8",
+    "local_directory_basename": "GLM-5.3-Flash-DFlash2-MXFP8",
+    "weight_sha256": "c033e03d47c7d5608596c8fc4e9336a1fe086eb781c08fe031be2bdea1614e58",
+    "license": "CC-BY-NC-ND-4.0",
+    "metadata_equivalence": "All five small metadata/config files and the weight LFS SHA match the tested local artifact. The old -MXFP8 repository URL is unavailable; the published repository omits that suffix.",
+    "weights_included": false
+  }
+}

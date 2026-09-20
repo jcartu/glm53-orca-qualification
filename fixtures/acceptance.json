@@ -1,0 +1,23 @@
+{
+  "schema": "orca-qualification-acceptance.v1",
+  "scope": "Bounded full-stack qualification on this four-GPU rig, not a claim of universal intelligence equivalence or indefinite stability.",
+  "promotion": "No automatic promotion. Restore original production container after every campaign.",
+  "integrity": "Pinned revisions, all remote file checksums verified, complete indexed tensors, explicit quantization dispatch and unchanged source weights.",
+  "fidelity": {
+    "comparisons": ["original FP8 to Orca FP8", "Orca FP8 to Orca NVFP4", "original FP8 to Orca NVFP4"],
+    "required": "Full-vocabulary teacher-forced normalized distributions, same token IDs, held-out fixed corpus, identical runtime and KV precision, raw per-window evidence.",
+    "interpretation": "Report measured KL/PPL/top1; no invented universal KLD pass threshold. Published 0.073 is not an exact reproduction target without the author's token IDs and reference execution. KLD does not establish retained task capability."
+  },
+  "capability": {
+    "suite": "60 deterministic tasks plus existing 52 functional behavior cases; nine established diagnostic prompts reported separately.",
+    "required": "All cases attempted with raw responses and verifier results; identical prompts, seeds and scoring between production control and candidate. Errors and truncation remain failures, not exclusions.",
+    "interpretation": "Report paired disagreements and uncertainty. No claim of equivalence from a nonsignificant result or a small benchmark subset. A loss greater than five percentage points on either functional suite is an operational regression flag, not a statistical equivalence margin."
+  },
+  "api_and_vision": "All declared protocol/tool/JSON contracts and 12 synthetic image cases attempted; report exact failures and unsupported limits.",
+  "long_context": "Existing 32 history cases plus 15 unique cold retrieval cases at approximately 128K, 512K and 1M tokens and five depths. Report actual prompt tokens and content-only answers.",
+  "cache": "Bounded lifecycle, restart, pressure, external restore and concurrent identity isolation; unavailable observability is never a pass.",
+  "performance": "Matched C1/C4/C8 at context 0/32K/128K, two 45-second sustained trials, prefill, steady server counters, speculative acceptance and mixed-traffic collision. Preserve every sample; report CV and flag greater than 2% rather than cherry-pick. GPU background contamination invalidates performance qualification.",
+  "stability": "At least 3600 seconds of mixed concurrent candidate agent traffic, with progress records, correctness canaries, cancellation/recovery and degeneration candidates. Zero runtime crashes/errors required; model failures retained independently.",
+  "safe_evaluation": "Only benign capability and over-refusal prompts; generated code confined to no-network, no-GPU, bounded read-only containers. Do not claim a reproduced harmful-compliance benchmark.",
+  "restoration": "Original container identity restored; health, model identity and useful inference checked."
+}
