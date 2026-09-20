@@ -494,6 +494,32 @@ def phase(name: str) -> None:
         sentinels("orca-dflash2")
         speed("orca-dflash2")
         stop_server()
+    elif name == "orca-prompt-layer":
+        boot("orca", "mtp3")
+        out = Path(rt.ROOT) / "prompt-layer-orca-mtp3"
+        probe = subprocess.run(
+            [
+                sys.executable,
+                str(HERE / "prompt_layer_probe.py"),
+                "--base-url",
+                BASE_URL,
+                "--model",
+                SERVED_MODEL,
+                "--fixture",
+                str(REPO / "fixtures/refusal/audit-prompts.json"),
+                "--system-prompt",
+                str(REPO / "fixtures/refusal/omp-coding-agent-system-prompt.txt"),
+                "--output-dir",
+                str(out),
+            ],
+            timeout=3600,
+        )
+        rt.record_gate(
+            "prompt-layer-probe:orca-mtp3",
+            probe.returncode == 0,
+            {"returncode": probe.returncode, "out": str(out)},
+        )
+        stop_server()
     elif name == "nvidia-mtp3-refusal":
         # NVIDIA MTP3 on this image dies in the known layer-45 MTP loader
         # mismatch (packed NVFP4 w2 256 vs BF16 tensor 512); deterministic

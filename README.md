@@ -22,6 +22,11 @@ load-time scale bugs), and with those fixed the real speed appears.
 - Patches, driver and machine-readable evidence:
   `campaign/kraken-orca/` and `results/orca-fastpath-20260920/`
 
+**Per-prompt refusal matrix — what was asked, what each model refused, and
+what each agreed to, for all 50 prompts and all four models:**
+[docs/refusal-matrix.md](docs/refusal-matrix.md) (machine-readable:
+`results/orca-fastpath-20260920/refusal-matrix.json`).
+
 Headline refusal finding (adjudicated, 4 arms, 50 prompts): on harmful
 requests the original and NVIDIA models gave **0/15** actionable answers;
 both Orca arms gave **12/15** (a second independent judge pass scored 11/15;
