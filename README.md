@@ -4,6 +4,31 @@ An independent test of the Orca abliterated FP8 and NVFP4 checkpoints on **four 
 
 **Qualification complete: not cleared for production.** The hour-long soak recorded structured-output HTTP 500s, and required cache observability was incomplete. The original production container was restored and verified; the candidate was not promoted. The owner approved public sharing and chose **no new license grant**.
 
+
+## Update 2026-09-20: full-speed serving achieved (read this first)
+
+The Orca NVFP4 checkpoint now serves at **299-304 tok/s single-stream with
+MTP-3** (239-248 with DFlash2 K7, 189 without speculation; 884-912 tok/s
+aggregate at 8 concurrent users; ~11k tok/s 32K prefill; zero errors in
+every measured cell). The slow numbers in the original qualification below
+(16-33 tok/s) describe the conservative correctness-first profile, **not**
+the checkpoint's capability: stock vLLM mis-reads this checkpoint (two
+load-time scale bugs), and with those fixed the real speed appears.
+
+- Plain-English end-to-end report (quality + refusals, what it will and
+  won't do): [docs/plain-english-report.md](docs/plain-english-report.md)
+- Technical recipe, stats and adjudicated refusal audit:
+  [docs/orca-fastpath-refusal-analysis.md](docs/orca-fastpath-refusal-analysis.md)
+- Patches, driver and machine-readable evidence:
+  `campaign/kraken-orca/` and `results/orca-fastpath-20260920/`
+
+Headline refusal finding (adjudicated, 4 arms, 50 prompts): on harmful
+requests the original and NVIDIA models gave **0/15** actionable answers;
+both Orca arms gave **11/15**. Over-refusal on benign sensitive prompts:
+**0/20 for every arm**. The shift is abliteration, not quantization, and not
+the speed patches. Nothing was promoted; production still serves the NVIDIA
+checkpoint.
+
 ## What we know
 
 - **The quantization claim is broadly credible.** We measured mean KL **0.0792** from Orca FP8 to Orca NVFP4, compared with the publisher's **0.073**. This is an independent measurement, not an exact replication of the publisher's experiment.
